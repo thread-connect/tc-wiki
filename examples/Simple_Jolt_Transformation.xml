@@ -1,0 +1,700 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template encoding-version="1.2">
+    <description>This template demonstrates a simple 1 to 1 JSON to JSON transformation using  Jolt
+</description>
+    <groupId>0e76323c-a66a-1d86-3c09-1e9ef584e9d6</groupId>
+    <name>Simple Jolt Transformation</name>
+    <snippet>
+        <processGroups>
+            <id>6d77e6ad-f1af-349c-0000-000000000000</id>
+            <parentGroupId>2e3492cb-28e7-3e67-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.0</x>
+                <y>0.0</y>
+            </position>
+            <comments></comments>
+            <contents>
+                <connections>
+                    <id>41ba9d03-0313-3f9f-0000-000000000000</id>
+                    <parentGroupId>6d77e6ad-f1af-349c-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>6d77e6ad-f1af-349c-0000-000000000000</groupId>
+                        <id>46a54ffd-735a-3c6d-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>6d77e6ad-f1af-349c-0000-000000000000</groupId>
+                        <id>5aefc376-4b52-340c-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>50c134f3-76b7-3198-0000-000000000000</id>
+                    <parentGroupId>6d77e6ad-f1af-349c-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <bends>
+                        <x>1108.0</x>
+                        <y>336.0</y>
+                    </bends>
+                    <destination>
+                        <groupId>6d77e6ad-f1af-349c-0000-000000000000</groupId>
+                        <id>d372e20e-ae62-3388-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>failure</selectedRelationships>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>6d77e6ad-f1af-349c-0000-000000000000</groupId>
+                        <id>46a54ffd-735a-3c6d-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>6a445761-d3bf-36eb-0000-000000000000</id>
+                    <parentGroupId>6d77e6ad-f1af-349c-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>6d77e6ad-f1af-349c-0000-000000000000</groupId>
+                        <id>61eee011-ba49-3be2-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>failure</selectedRelationships>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>6d77e6ad-f1af-349c-0000-000000000000</groupId>
+                        <id>d372e20e-ae62-3388-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <controllerServices>
+                    <id>c4855410-3752-3ff0-0000-000000000000</id>
+                    <parentGroupId>6d77e6ad-f1af-349c-0000-000000000000</parentGroupId>
+                    <bundle>
+                        <artifact>nifi-http-context-map-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0</version>
+                    </bundle>
+                    <descriptors>
+                        <entry>
+                            <key>Maximum Outstanding Requests</key>
+                            <value>
+<name>Maximum Outstanding Requests</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Request Expiration</key>
+                            <value>
+<name>Request Expiration</name>
+                            </value>
+                        </entry>
+                    </descriptors>
+                    <name>SimpleJoltHttpContextMap</name>
+                    <persistsState>false</persistsState>
+                    <properties>
+                        <entry>
+                            <key>Maximum Outstanding Requests</key>
+                        </entry>
+                        <entry>
+                            <key>Request Expiration</key>
+                        </entry>
+                    </properties>
+                    <state>ENABLED</state>
+                    <type>org.apache.nifi.http.StandardHttpContextMap</type>
+                </controllerServices>
+                <labels>
+                    <id>991c84c9-4a3d-3ebd-0000-000000000000</id>
+                    <parentGroupId>6d77e6ad-f1af-349c-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>465.0000004396343</x>
+                        <y>96.00000257419686</y>
+                    </position>
+                    <height>202.0</height>
+                    <label>This processor will prepend 
+data to the current content of
+the FlowFile
+---------------------------------------------------
+This processor also allows for 
+data to be 'appended to' or 
+'removed from' the content of a 
+FlowFile 
+----------------------------------------------------
+All of these options are based on 
+a regular expression used to 
+signal what to edit or where in the 
+content of the FlowFile to edit</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>12px</value>
+                        </entry>
+                    </style>
+                    <width>553.0</width>
+                </labels>
+                <labels>
+                    <id>ab4f08e6-d773-3249-0000-000000000000</id>
+                    <parentGroupId>6d77e6ad-f1af-349c-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1055.0000004396343</x>
+                        <y>115.00000257419686</y>
+                    </position>
+                    <height>159.0</height>
+                    <label>This processor allows one
+to do JSON to JSON 
+transformations</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>12px</value>
+                        </entry>
+                    </style>
+                    <width>531.0</width>
+                </labels>
+                <labels>
+                    <id>d6bcf498-39ec-306a-0000-000000000000</id>
+                    <parentGroupId>6d77e6ad-f1af-349c-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>831.0000004396343</x>
+                        <y>-389.99999742580314</y>
+                    </position>
+                    <height>114.0</height>
+                    <label>This flow demonstrates a one-to-one 
+JSON to JSON transformation using 
+Jolt Transformation Language and its
+complementary processor</label>
+                    <style>
+                        <entry>
+                            <key>background-color</key>
+                            <value>#f2d6ff</value>
+                        </entry>
+                        <entry>
+                            <key>font-size</key>
+                            <value>20px</value>
+                        </entry>
+                    </style>
+                    <width>362.0</width>
+                </labels>
+                <labels>
+                    <id>05a38757-e458-36d4-0000-000000000000</id>
+                    <parentGroupId>6d77e6ad-f1af-349c-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>441.83167266845703</x>
+                        <y>-200.2226276397705</y>
+                    </position>
+                    <height>160.64649963378906</height>
+                    <label>This processor allows some 
+HTTP request to enter the flow
+with all its attributes and content
+-----------------------------------------------
+This processor has been set
+to only allow GET requets
+</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>12px</value>
+                        </entry>
+                    </style>
+                    <width>582.0193481445312</width>
+                </labels>
+                <labels>
+                    <id>509658f2-fc20-3d3f-0000-000000000000</id>
+                    <parentGroupId>6d77e6ad-f1af-349c-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1058.0000004396343</x>
+                        <y>-202.99999742580314</y>
+                    </position>
+                    <height>161.0</height>
+                    <label>This processor allows an 
+HTTP response to be sent 
+back to the source of the 
+earlier HTTP request
+</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>12px</value>
+                        </entry>
+                    </style>
+                    <width>521.0</width>
+                </labels>
+                <processors>
+                    <id>d372e20e-ae62-3388-0000-000000000000</id>
+                    <parentGroupId>6d77e6ad-f1af-349c-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1222.0000004396343</x>
+                        <y>129.00000257419686</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>jolt-transform</key>
+<value>
+    <name>jolt-transform</name>
+</value>
+                            </entry>
+                            <entry>
+<key>jolt-custom-class</key>
+<value>
+    <name>jolt-custom-class</name>
+</value>
+                            </entry>
+                            <entry>
+<key>jolt-custom-modules</key>
+<value>
+    <name>jolt-custom-modules</name>
+</value>
+                            </entry>
+                            <entry>
+<key>jolt-spec</key>
+<value>
+    <name>jolt-spec</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Transform Cache Size</key>
+<value>
+    <name>Transform Cache Size</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>jolt-transform</key>
+<value>jolt-transform-chain</value>
+                            </entry>
+                            <entry>
+<key>jolt-custom-class</key>
+                            </entry>
+                            <entry>
+<key>jolt-custom-modules</key>
+                            </entry>
+                            <entry>
+<key>jolt-spec</key>
+<value>[
+  {
+    "operation": "shift",
+    "spec": {
+      "rating": {
+        "primary": "stuff.animalMeat",
+        "value": "stuff.objective",
+        "quality": "stuff.brand",
+        "price": "stuff.stuff"
+      }
+    }
+  }
+]
+</value>
+                            </entry>
+                            <entry>
+<key>Transform Cache Size</key>
+<value>1</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>JoltTransformJSON</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.JoltTransformJSON</type>
+                </processors>
+                <processors>
+                    <id>46a54ffd-735a-3c6d-0000-000000000000</id>
+                    <parentGroupId>6d77e6ad-f1af-349c-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>656.0000004396342</x>
+                        <y>129.00000257419686</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Regular Expression</key>
+<value>
+    <name>Regular Expression</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Replacement Value</key>
+<value>
+    <name>Replacement Value</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Character Set</key>
+<value>
+    <name>Character Set</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Maximum Buffer Size</key>
+<value>
+    <name>Maximum Buffer Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Replacement Strategy</key>
+<value>
+    <name>Replacement Strategy</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Evaluation Mode</key>
+<value>
+    <name>Evaluation Mode</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Regular Expression</key>
+<value>(?s)(^.*$)</value>
+                            </entry>
+                            <entry>
+<key>Replacement Value</key>
+<value>{
+  "rating": {
+    "primary": "lamb chop",
+    "value": 31,
+    "quality": "Grade C",
+    "price": "4000 Turkish Lira"
+  }
+}</value>
+                            </entry>
+                            <entry>
+<key>Character Set</key>
+<value>UTF-8</value>
+                            </entry>
+                            <entry>
+<key>Maximum Buffer Size</key>
+<value>1 MB</value>
+                            </entry>
+                            <entry>
+<key>Replacement Strategy</key>
+<value>Regex Replace</value>
+                            </entry>
+                            <entry>
+<key>Evaluation Mode</key>
+<value>Entire text</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>ReplaceText</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.ReplaceText</type>
+                </processors>
+                <processors>
+                    <id>5aefc376-4b52-340c-0000-000000000000</id>
+                    <parentGroupId>6d77e6ad-f1af-349c-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>655.2829921061568</x>
+                        <y>-182.9596105275868</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Listening Port</key>
+<value>
+    <name>Listening Port</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Hostname</key>
+<value>
+    <name>Hostname</name>
+</value>
+                            </entry>
+                            <entry>
+<key>SSL Context Service</key>
+<value>
+    <identifiesControllerService>org.apache.nifi.ssl.RestrictedSSLContextService</identifiesControllerService>
+    <name>SSL Context Service</name>
+</value>
+                            </entry>
+                            <entry>
+<key>HTTP Context Map</key>
+<value>
+    <identifiesControllerService>org.apache.nifi.http.HttpContextMap</identifiesControllerService>
+    <name>HTTP Context Map</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Allowed Paths</key>
+<value>
+    <name>Allowed Paths</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Default URL Character Set</key>
+<value>
+    <name>Default URL Character Set</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Allow GET</key>
+<value>
+    <name>Allow GET</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Allow POST</key>
+<value>
+    <name>Allow POST</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Allow PUT</key>
+<value>
+    <name>Allow PUT</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Allow DELETE</key>
+<value>
+    <name>Allow DELETE</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Allow HEAD</key>
+<value>
+    <name>Allow HEAD</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Allow OPTIONS</key>
+<value>
+    <name>Allow OPTIONS</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Additional HTTP Methods</key>
+<value>
+    <name>Additional HTTP Methods</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Client Authentication</key>
+<value>
+    <name>Client Authentication</name>
+</value>
+                            </entry>
+                            <entry>
+<key>container-queue-size</key>
+<value>
+    <name>container-queue-size</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Listening Port</key>
+<value>3107</value>
+                            </entry>
+                            <entry>
+<key>Hostname</key>
+                            </entry>
+                            <entry>
+<key>SSL Context Service</key>
+                            </entry>
+                            <entry>
+<key>HTTP Context Map</key>
+<value>c4855410-3752-3ff0-0000-000000000000</value>
+                            </entry>
+                            <entry>
+<key>Allowed Paths</key>
+                            </entry>
+                            <entry>
+<key>Default URL Character Set</key>
+<value>UTF-8</value>
+                            </entry>
+                            <entry>
+<key>Allow GET</key>
+<value>true</value>
+                            </entry>
+                            <entry>
+<key>Allow POST</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>Allow PUT</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>Allow DELETE</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>Allow HEAD</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>Allow OPTIONS</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>Additional HTTP Methods</key>
+                            </entry>
+                            <entry>
+<key>Client Authentication</key>
+<value>No Authentication</value>
+                            </entry>
+                            <entry>
+<key>container-queue-size</key>
+<value>50</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>HandleHttpRequest</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.HandleHttpRequest</type>
+                </processors>
+                <processors>
+                    <id>61eee011-ba49-3be2-0000-000000000000</id>
+                    <parentGroupId>6d77e6ad-f1af-349c-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1219.0000004396343</x>
+                        <y>-188.99999742580314</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>HTTP Status Code</key>
+<value>
+    <name>HTTP Status Code</name>
+</value>
+                            </entry>
+                            <entry>
+<key>HTTP Context Map</key>
+<value>
+    <identifiesControllerService>org.apache.nifi.http.HttpContextMap</identifiesControllerService>
+    <name>HTTP Context Map</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>HTTP Status Code</key>
+<value>200</value>
+                            </entry>
+                            <entry>
+<key>HTTP Context Map</key>
+<value>c4855410-3752-3ff0-0000-000000000000</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>HandleHttpResponse</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.HandleHttpResponse</type>
+                </processors>
+            </contents>
+            <name>Simple Jolt Transformation</name>
+            <variables/>
+        </processGroups>
+    </snippet>
+    <timestamp>05/21/2018 11:15:44 EDT</timestamp>
+</template>

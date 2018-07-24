@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="1200px" height="400px" viewBox="0 0 2113 734" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>1</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="1">
+            <g id="Group-3" transform="translate(0.000000, -19.000000)">
+                <g id="Group">
+                    <g id="Group-2" transform="translate(371.922057, 367.020872) rotate(14.000000) translate(-371.922057, -367.020872) translate(64.422057, 66.020872)">
+                        <path d="M309.359108,184.351143 C309.359108,56.0540207 415.257834,57.5552019 431.163695,57.8328397 C468.267337,58.4804862 562.119352,76.4337553 560.20081,186.34694 C558.040852,310.090889 429.847457,303.646842 429.847457,303.646842 L188.86163,303.646842 C188.86163,303.646842 57.118,298.14259 54.8813937,426.277676 C52.6447875,554.412762 188.864612,544.629687 188.864612,544.629687 C188.864612,544.629687 307.85285,544.550564 309.359108,425.340136" id="Path-2-Copy" stroke="#13294B" stroke-width="25" stroke-linecap="round" transform="translate(307.541970, 301.299530) rotate(-15.000000) translate(-307.541970, -301.299530) "></path>
+                        <circle id="Oval-2" fill="#13294B" cx="295.2831" cy="246.391778" r="20.4840644"></circle>
+                        <circle id="Oval-2-Copy" fill="#13294B" cx="322.996834" cy="360.861549" r="20.4840644"></circle>
+                        <path d="M200.020864,421.730737 L221.709873,500.05216" id="Line" stroke="#13294B" stroke-width="16" stroke-linecap="round"></path>
+                        <circle id="Oval-3" stroke="#13294B" stroke-width="16" stroke-linecap="round" cx="400.6442" cy="151.220593" r="37.9557663"></circle>
+                    </g>
+                </g>
+                <text id="ThreadConnect" font-family="GEInspiraSerif-Regular, GE Inspira Serif" font-size="225" font-weight="normal" fill="#13294B">
+                    <tspan x="506.225" y="604">ThreadConnect</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>
