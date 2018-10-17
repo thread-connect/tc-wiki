@@ -1,0 +1,880 @@
+<?xml version="1.0" ?>
+<template encoding-version="1.0">
+  <description>Example of exposing a REST API that takes XML as input, transforms to 
+SOAP, invokes a webservice and then transforms response back to
+XML and responds to client.</description>
+  <groupId>f19e62ed-015a-1000-dfdc-58f785feea2e</groupId>
+  <name>Invoke SOAP API Template</name>
+  <snippet>
+    <controllerServices>
+      <id>b369d993-48ae-4c0e-0000-000000000000</id>
+      <parentGroupId>f19e62ed-015a-1000-0000-000000000000</parentGroupId>
+      <comments></comments>
+      <descriptors>
+        <entry>
+          <key>Maximum Outstanding Requests</key>
+          <value>
+            <name>Maximum Outstanding Requests</name>
+          </value>
+        </entry>
+        <entry>
+          <key>Request Expiration</key>
+          <value>
+            <name>Request Expiration</name>
+          </value>
+        </entry>
+      </descriptors>
+      <name>WorkScope_StandardHttpContextMap</name>
+      <properties>
+        <entry>
+          <key>Maximum Outstanding Requests</key>
+          <value>5000</value>
+        </entry>
+        <entry>
+          <key>Request Expiration</key>
+          <value>1 min</value>
+        </entry>
+      </properties>
+      <state>DISABLED</state>
+      <type>org.apache.nifi.http.StandardHttpContextMap</type>
+    </controllerServices>
+    <processGroups>
+      <id>9c804621-0163-1000-0000-000000000000</id>
+      <parentGroupId>f19e62ed-015a-1000-0000-000000000000</parentGroupId>
+      <position>
+        <x>0.0</x>
+        <y>0.0</y>
+      </position>
+      <comments>Template for exposing an API that receives XML,  invokes
+an SAP PI SOAP API, checks the result and then returns
+response to client.</comments>
+      <contents>
+        <connections>
+          <id>a3b22d5c-0163-1000-0000-000000000000</id>
+          <parentGroupId>9c804621-0163-1000-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>9c804621-0163-1000-0000-000000000000</groupId>
+            <id>a3b1f22f-0163-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>failure</selectedRelationships>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>9c804621-0163-1000-0000-000000000000</groupId>
+            <id>9d5bc155-0163-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>44f9e454-0165-1000-0000-000000000000</id>
+          <parentGroupId>9c804621-0163-1000-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>9c804621-0163-1000-0000-000000000000</groupId>
+            <id>9d5bc155-0163-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>9c804621-0163-1000-0000-000000000000</groupId>
+            <id>9c80f7e9-0163-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>45106a3d-0165-1000-0000-000000000000</id>
+          <parentGroupId>9c804621-0163-1000-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>9c804621-0163-1000-0000-000000000000</groupId>
+            <id>b7b78560-0163-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>failure</selectedRelationships>
+          <selectedRelationships>success</selectedRelationships>
+          <source>
+            <groupId>9c804621-0163-1000-0000-000000000000</groupId>
+            <id>45104a87-0165-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <connections>
+          <id>4510880b-0165-1000-0000-000000000000</id>
+          <parentGroupId>9c804621-0163-1000-0000-000000000000</parentGroupId>
+          <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+          <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+          <destination>
+            <groupId>9c804621-0163-1000-0000-000000000000</groupId>
+            <id>45104a87-0165-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </destination>
+          <flowFileExpiration>0 sec</flowFileExpiration>
+          <labelIndex>1</labelIndex>
+          <name></name>
+          <selectedRelationships>Failure</selectedRelationships>
+          <selectedRelationships>No Retry</selectedRelationships>
+          <selectedRelationships>Response</selectedRelationships>
+          <selectedRelationships>Retry</selectedRelationships>
+          <source>
+            <groupId>9c804621-0163-1000-0000-000000000000</groupId>
+            <id>a3b1f22f-0163-1000-0000-000000000000</id>
+            <type>PROCESSOR</type>
+          </source>
+          <zIndex>0</zIndex>
+        </connections>
+        <labels>
+          <id>44fa72ba-0165-1000-0000-000000000000</id>
+          <parentGroupId>9c804621-0163-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>-141.44430932376076</x>
+            <y>-1.8886144254393287</y>
+          </position>
+          <height>38.040008544921875</height>
+          <label>Expose HTTP POST API that will listen on specified port to incoming
+requests containing XML</label>
+          <style>
+            <entry>
+              <key>font-size</key>
+              <value>12px</value>
+            </entry>
+          </style>
+          <width>386.1636657714844</width>
+        </labels>
+        <labels>
+          <id>44fdd399-0165-1000-0000-000000000000</id>
+          <parentGroupId>9c804621-0163-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>666.6175521757696</x>
+            <y>-148.2849949407387</y>
+          </position>
+          <height>56.483646392822266</height>
+          <label>Transform XML uses XSLT spec to convert XML to SOAP</label>
+          <style>
+            <entry>
+              <key>font-size</key>
+              <value>12px</value>
+            </entry>
+          </style>
+          <width>310.08367919921875</width>
+        </labels>
+        <labels>
+          <id>44fe3972-0165-1000-0000-000000000000</id>
+          <parentGroupId>9c804621-0163-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>674.6867050078008</x>
+            <y>31.540481375884013</y>
+          </position>
+          <height>48.414554595947266</height>
+          <label>InvokeHTTP processor is used to call SOAP webservice</label>
+          <style>
+            <entry>
+              <key>font-size</key>
+              <value>12px</value>
+            </entry>
+          </style>
+          <width>302.0145568847656</width>
+        </labels>
+        <labels>
+          <id>4510a1e9-0165-1000-0000-000000000000</id>
+          <parentGroupId>9c804621-0163-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>662.0066075801517</x>
+            <y>305.8895657080691</y>
+          </position>
+          <height>71.46910858154297</height>
+          <label>We use XSLT again to check the SOAP webservice response, then
+transform to XML and return to client.</label>
+          <style>
+            <entry>
+              <key>font-size</key>
+              <value>12px</value>
+            </entry>
+          </style>
+          <width>356.1927795410156</width>
+        </labels>
+        <processors>
+          <id>9c80f7e9-0163-1000-0000-000000000000</id>
+          <parentGroupId>9c804621-0163-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>-143.0596354140929</x>
+            <y>-149.51887028674236</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>Listening Port</key>
+                <value>
+                  <name>Listening Port</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Hostname</key>
+                <value>
+                  <name>Hostname</name>
+                </value>
+              </entry>
+              <entry>
+                <key>SSL Context Service</key>
+                <value>
+                  <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+                  <name>SSL Context Service</name>
+                </value>
+              </entry>
+              <entry>
+                <key>HTTP Context Map</key>
+                <value>
+                  <identifiesControllerService>org.apache.nifi.http.HttpContextMap</identifiesControllerService>
+                  <name>HTTP Context Map</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Allowed Paths</key>
+                <value>
+                  <name>Allowed Paths</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Default URL Character Set</key>
+                <value>
+                  <name>Default URL Character Set</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Allow GET</key>
+                <value>
+                  <name>Allow GET</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Allow POST</key>
+                <value>
+                  <name>Allow POST</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Allow PUT</key>
+                <value>
+                  <name>Allow PUT</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Allow DELETE</key>
+                <value>
+                  <name>Allow DELETE</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Allow HEAD</key>
+                <value>
+                  <name>Allow HEAD</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Allow OPTIONS</key>
+                <value>
+                  <name>Allow OPTIONS</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Additional HTTP Methods</key>
+                <value>
+                  <name>Additional HTTP Methods</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Client Authentication</key>
+                <value>
+                  <name>Client Authentication</name>
+                </value>
+              </entry>
+              <entry>
+                <key>container-queue-size</key>
+                <value>
+                  <name>container-queue-size</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>Listening Port</key>
+                <value>3012</value>
+              </entry>
+              <entry>
+                <key>Hostname</key>
+              </entry>
+              <entry>
+                <key>SSL Context Service</key>
+              </entry>
+              <entry>
+                <key>HTTP Context Map</key>
+                <value>b369d993-48ae-4c0e-0000-000000000000</value>
+              </entry>
+              <entry>
+                <key>Allowed Paths</key>
+              </entry>
+              <entry>
+                <key>Default URL Character Set</key>
+                <value>UTF-8</value>
+              </entry>
+              <entry>
+                <key>Allow GET</key>
+                <value>false</value>
+              </entry>
+              <entry>
+                <key>Allow POST</key>
+                <value>true</value>
+              </entry>
+              <entry>
+                <key>Allow PUT</key>
+                <value>false</value>
+              </entry>
+              <entry>
+                <key>Allow DELETE</key>
+                <value>false</value>
+              </entry>
+              <entry>
+                <key>Allow HEAD</key>
+                <value>false</value>
+              </entry>
+              <entry>
+                <key>Allow OPTIONS</key>
+                <value>false</value>
+              </entry>
+              <entry>
+                <key>Additional HTTP Methods</key>
+              </entry>
+              <entry>
+                <key>Client Authentication</key>
+                <value>No Authentication</value>
+              </entry>
+              <entry>
+                <key>container-queue-size</key>
+                <value>50</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>HandleHttpRequest</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.HandleHttpRequest</type>
+        </processors>
+        <processors>
+          <id>9d5bc155-0163-1000-0000-000000000000</id>
+          <parentGroupId>9c804621-0163-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>295.9403645859071</x>
+            <y>-148.51887028674236</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>XSLT file name</key>
+                <value>
+                  <name>XSLT file name</name>
+                </value>
+              </entry>
+              <entry>
+                <key>indent-output</key>
+                <value>
+                  <name>indent-output</name>
+                </value>
+              </entry>
+              <entry>
+                <key>cache-size</key>
+                <value>
+                  <name>cache-size</name>
+                </value>
+              </entry>
+              <entry>
+                <key>cache-ttl-after-last-access</key>
+                <value>
+                  <name>cache-ttl-after-last-access</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>XSLT file name</key>
+                <value>YourXSLTSpec.xsl</value>
+              </entry>
+              <entry>
+                <key>indent-output</key>
+                <value>true</value>
+              </entry>
+              <entry>
+                <key>cache-size</key>
+                <value>10</value>
+              </entry>
+              <entry>
+                <key>cache-ttl-after-last-access</key>
+                <value>10 secs</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>TransformXml</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>failure</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.TransformXml</type>
+        </processors>
+        <processors>
+          <id>a3b1f22f-0163-1000-0000-000000000000</id>
+          <parentGroupId>9c804621-0163-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>284.9403645859071</x>
+            <y>31.481129713257644</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>HTTP Method</key>
+                <value>
+                  <name>HTTP Method</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Remote URL</key>
+                <value>
+                  <name>Remote URL</name>
+                </value>
+              </entry>
+              <entry>
+                <key>SSL Context Service</key>
+                <value>
+                  <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+                  <name>SSL Context Service</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Connection Timeout</key>
+                <value>
+                  <name>Connection Timeout</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Read Timeout</key>
+                <value>
+                  <name>Read Timeout</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Include Date Header</key>
+                <value>
+                  <name>Include Date Header</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Follow Redirects</key>
+                <value>
+                  <name>Follow Redirects</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Attributes to Send</key>
+                <value>
+                  <name>Attributes to Send</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Basic Authentication Username</key>
+                <value>
+                  <name>Basic Authentication Username</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Basic Authentication Password</key>
+                <value>
+                  <name>Basic Authentication Password</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Proxy Host</key>
+                <value>
+                  <name>Proxy Host</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Proxy Port</key>
+                <value>
+                  <name>Proxy Port</name>
+                </value>
+              </entry>
+              <entry>
+                <key>invokehttp-proxy-user</key>
+                <value>
+                  <name>invokehttp-proxy-user</name>
+                </value>
+              </entry>
+              <entry>
+                <key>invokehttp-proxy-password</key>
+                <value>
+                  <name>invokehttp-proxy-password</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Put Response Body In Attribute</key>
+                <value>
+                  <name>Put Response Body In Attribute</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Max Length To Put In Attribute</key>
+                <value>
+                  <name>Max Length To Put In Attribute</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Digest Authentication</key>
+                <value>
+                  <name>Digest Authentication</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Always Output Response</key>
+                <value>
+                  <name>Always Output Response</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Trusted Hostname</key>
+                <value>
+                  <name>Trusted Hostname</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Add Response Headers to Request</key>
+                <value>
+                  <name>Add Response Headers to Request</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Content-Type</key>
+                <value>
+                  <name>Content-Type</name>
+                </value>
+              </entry>
+              <entry>
+                <key>send-message-body</key>
+                <value>
+                  <name>send-message-body</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Use Chunked Encoding</key>
+                <value>
+                  <name>Use Chunked Encoding</name>
+                </value>
+              </entry>
+              <entry>
+                <key>Penalize on "No Retry"</key>
+                <value>
+                  <name>Penalize on "No Retry"</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>HTTP Method</key>
+                <value>POST</value>
+              </entry>
+              <entry>
+                <key>Remote URL</key>
+                <value>http://soap.api.com</value>
+              </entry>
+              <entry>
+                <key>SSL Context Service</key>
+              </entry>
+              <entry>
+                <key>Connection Timeout</key>
+                <value>5 secs</value>
+              </entry>
+              <entry>
+                <key>Read Timeout</key>
+                <value>15 secs</value>
+              </entry>
+              <entry>
+                <key>Include Date Header</key>
+                <value>True</value>
+              </entry>
+              <entry>
+                <key>Follow Redirects</key>
+                <value>True</value>
+              </entry>
+              <entry>
+                <key>Attributes to Send</key>
+              </entry>
+              <entry>
+                <key>Basic Authentication Username</key>
+                <value>PW_TC_QX0</value>
+              </entry>
+              <entry>
+                <key>Basic Authentication Password</key>
+              </entry>
+              <entry>
+                <key>Proxy Host</key>
+              </entry>
+              <entry>
+                <key>Proxy Port</key>
+              </entry>
+              <entry>
+                <key>invokehttp-proxy-user</key>
+              </entry>
+              <entry>
+                <key>invokehttp-proxy-password</key>
+              </entry>
+              <entry>
+                <key>Put Response Body In Attribute</key>
+              </entry>
+              <entry>
+                <key>Max Length To Put In Attribute</key>
+                <value>256</value>
+              </entry>
+              <entry>
+                <key>Digest Authentication</key>
+                <value>false</value>
+              </entry>
+              <entry>
+                <key>Always Output Response</key>
+                <value>false</value>
+              </entry>
+              <entry>
+                <key>Trusted Hostname</key>
+              </entry>
+              <entry>
+                <key>Add Response Headers to Request</key>
+                <value>false</value>
+              </entry>
+              <entry>
+                <key>Content-Type</key>
+                <value>${mime.type}</value>
+              </entry>
+              <entry>
+                <key>send-message-body</key>
+                <value>true</value>
+              </entry>
+              <entry>
+                <key>Use Chunked Encoding</key>
+                <value>false</value>
+              </entry>
+              <entry>
+                <key>Penalize on "No Retry"</key>
+                <value>false</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>Invoke PI webservice</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>Failure</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>No Retry</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>Original</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>Response</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>Retry</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.InvokeHTTP</type>
+        </processors>
+        <processors>
+          <id>b7b78560-0163-1000-0000-000000000000</id>
+          <parentGroupId>9c804621-0163-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>298.5769902557795</x>
+            <y>358.9571162841163</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>HTTP Status Code</key>
+                <value>
+                  <name>HTTP Status Code</name>
+                </value>
+              </entry>
+              <entry>
+                <key>HTTP Context Map</key>
+                <value>
+                  <identifiesControllerService>org.apache.nifi.http.HttpContextMap</identifiesControllerService>
+                  <name>HTTP Context Map</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>HTTP Status Code</key>
+                <value>200</value>
+              </entry>
+              <entry>
+                <key>HTTP Context Map</key>
+                <value>b369d993-48ae-4c0e-0000-000000000000</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>Response</name>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>failure</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>true</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.HandleHttpResponse</type>
+        </processors>
+        <processors>
+          <id>45104a87-0165-1000-0000-000000000000</id>
+          <parentGroupId>9c804621-0163-1000-0000-000000000000</parentGroupId>
+          <position>
+            <x>286.21753724367426</x>
+            <y>196.38050045346114</y>
+          </position>
+          <config>
+            <bulletinLevel>WARN</bulletinLevel>
+            <comments></comments>
+            <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+            <descriptors>
+              <entry>
+                <key>XSLT file name</key>
+                <value>
+                  <name>XSLT file name</name>
+                </value>
+              </entry>
+              <entry>
+                <key>indent-output</key>
+                <value>
+                  <name>indent-output</name>
+                </value>
+              </entry>
+              <entry>
+                <key>cache-size</key>
+                <value>
+                  <name>cache-size</name>
+                </value>
+              </entry>
+              <entry>
+                <key>cache-ttl-after-last-access</key>
+                <value>
+                  <name>cache-ttl-after-last-access</name>
+                </value>
+              </entry>
+            </descriptors>
+            <executionNode>ALL</executionNode>
+            <lossTolerant>false</lossTolerant>
+            <penaltyDuration>30 sec</penaltyDuration>
+            <properties>
+              <entry>
+                <key>XSLT file name</key>
+                <value>YourXSLTSpec.xsl</value>
+              </entry>
+              <entry>
+                <key>indent-output</key>
+                <value>true</value>
+              </entry>
+              <entry>
+                <key>cache-size</key>
+                <value>10</value>
+              </entry>
+              <entry>
+                <key>cache-ttl-after-last-access</key>
+                <value>60 secs</value>
+              </entry>
+            </properties>
+            <runDurationMillis>0</runDurationMillis>
+            <schedulingPeriod>0 sec</schedulingPeriod>
+            <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+            <yieldDuration>1 sec</yieldDuration>
+          </config>
+          <name>TransformXml</name>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>failure</name>
+          </relationships>
+          <relationships>
+            <autoTerminate>false</autoTerminate>
+            <name>success</name>
+          </relationships>
+          <style></style>
+          <type>org.apache.nifi.processors.standard.TransformXml</type>
+        </processors>
+      </contents>
+      <name>Invoke SOAP API</name>
+    </processGroups>
+  </snippet>
+  <timestamp>08/16/2018 19:30:57 EDT</timestamp>
+</template>

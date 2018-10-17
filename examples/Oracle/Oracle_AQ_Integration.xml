@@ -1,0 +1,1240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template encoding-version="1.2">
+    <description>Provides Integration witj Oracle AQ </description>
+    <groupId>b3703432-0162-1000-2257-b801ac07e748</groupId>
+    <name>Oracle AQ Integration</name>
+    <snippet>
+        <controllerServices>
+            <id>ac0fc2bf-0f2e-3dcf-0000-000000000000</id>
+            <parentGroupId>8698d4a8-8b04-3a6f-0000-000000000000</parentGroupId>
+            <bundle>
+                <artifact>tc-oracle-connector-nar</artifact>
+                <group>ge.digital.tc</group>
+                <version>2.0.0-SNAPSHOT</version>
+            </bundle>
+            <comments></comments>
+            <descriptors>
+                <entry>
+                    <key>Min Pool Size</key>
+                    <value>
+                        <name>Min Pool Size</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>Max Pool Size</key>
+                    <value>
+                        <name>Max Pool Size</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>Validation-query</key>
+                    <value>
+                        <name>Validation-query</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>Database Connection URL</key>
+                    <value>
+                        <name>Database Connection URL</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>User Name</key>
+                    <value>
+                        <name>User Name</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>Max Wait Time</key>
+                    <value>
+                        <name>Max Wait Time</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>Initial Pool Size</key>
+                    <value>
+                        <name>Initial Pool Size</name>
+                    </value>
+                </entry>
+                <entry>
+                    <key>Password</key>
+                    <value>
+                        <name>Password</name>
+                    </value>
+                </entry>
+            </descriptors>
+            <name>OracleConnection</name>
+            <persistsState>false</persistsState>
+            <properties>
+                <entry>
+                    <key>Min Pool Size</key>
+                    <value>2</value>
+                </entry>
+                <entry>
+                    <key>Max Pool Size</key>
+                    <value>3</value>
+                </entry>
+                <entry>
+                    <key>Validation-query</key>
+                </entry>
+                <entry>
+                    <key>Database Connection URL</key>
+                    <value>jdbc:oracle:thin:@oged-scan.og.ge.com:1521/ORPOGPR1</value>
+                </entry>
+                <entry>
+                    <key>User Name</key>
+                    <value>APPS</value>
+                </entry>
+                <entry>
+                    <key>Max Wait Time</key>
+                    <value>10</value>
+                </entry>
+                <entry>
+                    <key>Initial Pool Size</key>
+                    <value>2</value>
+                </entry>
+                <entry>
+                    <key>Password</key>
+                </entry>
+            </properties>
+            <state>DISABLED</state>
+            <type>ge.digital.tc.oracleservice.OracleConnection</type>
+        </controllerServices>
+        <labels>
+            <id>f7ca6379-bbf2-3301-0000-000000000000</id>
+            <parentGroupId>8698d4a8-8b04-3a6f-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.6191542193628266</x>
+                <y>0.0</y>
+            </position>
+            <height>54.22645950317383</height>
+            <label>Integration with Oracle AQ Stream -
+     Publisher and Subscriber</label>
+            <style>
+                <entry>
+                    <key>font-size</key>
+                    <value>16px</value>
+                </entry>
+            </style>
+            <width>300.82843017578125</width>
+        </labels>
+        <processGroups>
+            <id>0a91525a-1cc0-3fa9-0000-000000000000</id>
+            <parentGroupId>8698d4a8-8b04-3a6f-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.0</x>
+                <y>84.86311788378862</y>
+            </position>
+            <comments></comments>
+            <contents>
+                <connections>
+                    <id>8fa2de49-d2f3-311f-0000-000000000000</id>
+                    <parentGroupId>0a91525a-1cc0-3fa9-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>0a91525a-1cc0-3fa9-0000-000000000000</groupId>
+                        <id>fb771d20-b365-37c1-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>Failure</selectedRelationships>
+                    <source>
+                        <groupId>0a91525a-1cc0-3fa9-0000-000000000000</groupId>
+                        <id>7fe22f8f-7f54-3412-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>f5cfbcb2-2dc5-3dc7-0000-000000000000</id>
+                    <parentGroupId>0a91525a-1cc0-3fa9-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>0a91525a-1cc0-3fa9-0000-000000000000</groupId>
+                        <id>d1a63c4a-9156-3f64-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>Success</selectedRelationships>
+                    <source>
+                        <groupId>0a91525a-1cc0-3fa9-0000-000000000000</groupId>
+                        <id>52e01d3e-eec0-3377-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>025087e9-8a54-311a-0000-000000000000</id>
+                    <parentGroupId>0a91525a-1cc0-3fa9-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>0a91525a-1cc0-3fa9-0000-000000000000</groupId>
+                        <id>09bc3b3d-4548-38be-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>Success</selectedRelationships>
+                    <source>
+                        <groupId>0a91525a-1cc0-3fa9-0000-000000000000</groupId>
+                        <id>7fe22f8f-7f54-3412-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>41f826cb-45b8-3127-0000-000000000000</id>
+                    <parentGroupId>0a91525a-1cc0-3fa9-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>0a91525a-1cc0-3fa9-0000-000000000000</groupId>
+                        <id>7fe22f8f-7f54-3412-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>0a91525a-1cc0-3fa9-0000-000000000000</groupId>
+                        <id>1d53975c-3c90-3ae3-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <controllerServices>
+                    <id>6cc6ba51-68e9-372f-0000-000000000000</id>
+                    <parentGroupId>0a91525a-1cc0-3fa9-0000-000000000000</parentGroupId>
+                    <bundle>
+                        <artifact>tc-oracle-connector-nar</artifact>
+                        <group>ge.digital.tc</group>
+                        <version>2.0.0-SNAPSHOT</version>
+                    </bundle>
+                    <comments></comments>
+                    <descriptors>
+                        <entry>
+                            <key>Min Pool Size</key>
+                            <value>
+<name>Min Pool Size</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Max Pool Size</key>
+                            <value>
+<name>Max Pool Size</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Validation-query</key>
+                            <value>
+<name>Validation-query</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Database Connection URL</key>
+                            <value>
+<name>Database Connection URL</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>User Name</key>
+                            <value>
+<name>User Name</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Max Wait Time</key>
+                            <value>
+<name>Max Wait Time</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Initial Pool Size</key>
+                            <value>
+<name>Initial Pool Size</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Password</key>
+                            <value>
+<name>Password</name>
+                            </value>
+                        </entry>
+                    </descriptors>
+                    <name>OracleConnection</name>
+                    <persistsState>false</persistsState>
+                    <properties>
+                        <entry>
+                            <key>Min Pool Size</key>
+                        </entry>
+                        <entry>
+                            <key>Max Pool Size</key>
+                        </entry>
+                        <entry>
+                            <key>Validation-query</key>
+                            <value>select 1 from dual</value>
+                        </entry>
+                        <entry>
+                            <key>Database Connection URL</key>
+                            <value>jdbc:oracle:thin:@HostName:Port/ServiceName</value>
+                        </entry>
+                        <entry>
+                            <key>User Name</key>
+                            <value>username</value>
+                        </entry>
+                        <entry>
+                            <key>Max Wait Time</key>
+                        </entry>
+                        <entry>
+                            <key>Initial Pool Size</key>
+                        </entry>
+                        <entry>
+                            <key>Password</key>
+                        </entry>
+                    </properties>
+                    <state>DISABLED</state>
+                    <type>ge.digital.tc.oracleservice.OracleConnection</type>
+                </controllerServices>
+                <labels>
+                    <id>8b5f379d-06e8-344f-0000-000000000000</id>
+                    <parentGroupId>0a91525a-1cc0-3fa9-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>784.8522876199893</x>
+                        <y>-43.07956272543163</y>
+                    </position>
+                    <height>109.00001525878906</height>
+                    <label>PublishAQ Processor - 
+Publishes AQ messages to Oracle AQ configured queue
+
+Configuration
+1. Configure Controller service to create oracle connection
+2. Set the queue and the schema etc as configured. 
+
+
+Note : The Oracle AQ supports drivers ( 7 &amp; 8 ) - latest</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>14px</value>
+                        </entry>
+                    </style>
+                    <width>387.0</width>
+                </labels>
+                <labels>
+                    <id>9a3d7e30-f7f1-3c62-0000-000000000000</id>
+                    <parentGroupId>0a91525a-1cc0-3fa9-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>796.7803271707705</x>
+                        <y>1018.63248866617</y>
+                    </position>
+                    <height>71.00001525878906</height>
+                    <label>The ConsumeAQ Processor sends flowfile
+with AQ message consumed from OracleAQ</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>14px</value>
+                        </entry>
+                    </style>
+                    <width>287.0</width>
+                </labels>
+                <labels>
+                    <id>a856f284-ae23-368a-0000-000000000000</id>
+                    <parentGroupId>0a91525a-1cc0-3fa9-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1158.8522876199893</x>
+                        <y>381.92045253335743</y>
+                    </position>
+                    <height>71.00001525878906</height>
+                    <label>The PublishAQ Processor sends flowfile
+with 'Message Id' returned after successfully
+publishing a message </label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>14px</value>
+                        </entry>
+                    </style>
+                    <width>287.0</width>
+                </labels>
+                <labels>
+                    <id>bcf53f9f-e880-3e4c-0000-000000000000</id>
+                    <parentGroupId>0a91525a-1cc0-3fa9-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1347.8522876199893</x>
+                        <y>-9.079562725431629</y>
+                    </position>
+                    <height>71.00001525878906</height>
+                    <label>The PublishAQ Processor sends failure
+flowfile when there is an exception or
+connection error </label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>14px</value>
+                        </entry>
+                    </style>
+                    <width>287.0</width>
+                </labels>
+                <labels>
+                    <id>c5a82a2b-e3dd-33e6-0000-000000000000</id>
+                    <parentGroupId>0a91525a-1cc0-3fa9-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>235.85228761998928</x>
+                        <y>292.92045253335743</y>
+                    </position>
+                    <height>57.00001525878906</height>
+                    <label>Creates message payload that should
+be sent to Oracle AQ queue</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>14px</value>
+                        </entry>
+                    </style>
+                    <width>255.0</width>
+                </labels>
+                <labels>
+                    <id>e00c0741-85e4-3969-0000-000000000000</id>
+                    <parentGroupId>0a91525a-1cc0-3fa9-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>206.85228761998928</x>
+                        <y>-131.07954746664257</y>
+                    </position>
+                    <height>55.0</height>
+                    <label>PublishAQ - Publishes event messages to Oracle AQ Stream</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>16px</value>
+                        </entry>
+                    </style>
+                    <width>448.0</width>
+                </labels>
+                <labels>
+                    <id>107fd77c-0f0c-3429-0000-000000000000</id>
+                    <parentGroupId>0a91525a-1cc0-3fa9-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>184.37470202428642</x>
+                        <y>1236.2748662052322</y>
+                    </position>
+                    <height>117.50389099121094</height>
+                    <label>Using Advanced Button
+
+Advanced Button is used for registering new consumer/subscriber
+for listening for AQ messages.
+With Advanced Button, you can search for metadata information of
+the event queue</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>14px</value>
+                        </entry>
+                    </style>
+                    <width>456.1919860839844</width>
+                </labels>
+                <labels>
+                    <id>110049fb-e80d-3e28-0000-000000000000</id>
+                    <parentGroupId>0a91525a-1cc0-3fa9-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>185.87630495397366</x>
+                        <y>1026.352459369295</y>
+                    </position>
+                    <height>158.0824737548828</height>
+                    <label>The ConsumeAQ Processor listens for messages 
+from Oracle AQ.  It has poll mechanism which
+polls for message periodically
+
+Configuration:
+1. Setup Oracle Connection like PublishAQ
+2. Set all details such as queue, schema and event to listen
+3. Set the consumer name - ( If doesn't exist, create new consumer
+from 'Advanced button shown in the bottom-left corner of processor' </label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>14px</value>
+                        </entry>
+                    </style>
+                    <width>458.1463317871094</width>
+                </labels>
+                <labels>
+                    <id>39d474a4-8447-3317-0000-000000000000</id>
+                    <parentGroupId>0a91525a-1cc0-3fa9-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>190.3802722391299</x>
+                        <y>653.8947719913652</y>
+                    </position>
+                    <height>51.03840637207031</height>
+                    <label>ConsumeAQ - Consumes AQ messages from Oracle AQ Stream</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>16px</value>
+                        </entry>
+                    </style>
+                    <width>461.09112548828125</width>
+                </labels>
+                <processors>
+                    <id>d1a63c4a-9156-3f64-0000-000000000000</id>
+                    <parentGroupId>0a91525a-1cc0-3fa9-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>792.263916015625</x>
+                        <y>850.0960006713867</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Group</key>
+<value>
+    <name>Group</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Owner</key>
+<value>
+    <name>Owner</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Create Missing Directories</key>
+<value>
+    <name>Create Missing Directories</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Permissions</key>
+<value>
+    <name>Permissions</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Maximum File Count</key>
+<value>
+    <name>Maximum File Count</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Last Modified Time</key>
+<value>
+    <name>Last Modified Time</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Directory</key>
+<value>
+    <name>Directory</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Conflict Resolution Strategy</key>
+<value>
+    <name>Conflict Resolution Strategy</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Group</key>
+                            </entry>
+                            <entry>
+<key>Owner</key>
+                            </entry>
+                            <entry>
+<key>Create Missing Directories</key>
+<value>true</value>
+                            </entry>
+                            <entry>
+<key>Permissions</key>
+                            </entry>
+                            <entry>
+<key>Maximum File Count</key>
+                            </entry>
+                            <entry>
+<key>Last Modified Time</key>
+                            </entry>
+                            <entry>
+<key>Directory</key>
+                            </entry>
+                            <entry>
+<key>Conflict Resolution Strategy</key>
+<value>fail</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>PutFile</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style>
+                        <entry>
+                            <key>background-color</key>
+                            <value>#2bd126</value>
+                        </entry>
+                    </style>
+                    <type>org.apache.nifi.processors.standard.PutFile</type>
+                </processors>
+                <processors>
+                    <id>fb771d20-b365-37c1-0000-000000000000</id>
+                    <parentGroupId>0a91525a-1cc0-3fa9-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1346.9999389648438</x>
+                        <y>86.99999237060547</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Group</key>
+<value>
+    <name>Group</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Owner</key>
+<value>
+    <name>Owner</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Create Missing Directories</key>
+<value>
+    <name>Create Missing Directories</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Permissions</key>
+<value>
+    <name>Permissions</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Maximum File Count</key>
+<value>
+    <name>Maximum File Count</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Last Modified Time</key>
+<value>
+    <name>Last Modified Time</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Directory</key>
+<value>
+    <name>Directory</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Conflict Resolution Strategy</key>
+<value>
+    <name>Conflict Resolution Strategy</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Group</key>
+                            </entry>
+                            <entry>
+<key>Owner</key>
+                            </entry>
+                            <entry>
+<key>Create Missing Directories</key>
+<value>true</value>
+                            </entry>
+                            <entry>
+<key>Permissions</key>
+                            </entry>
+                            <entry>
+<key>Maximum File Count</key>
+                            </entry>
+                            <entry>
+<key>Last Modified Time</key>
+                            </entry>
+                            <entry>
+<key>Directory</key>
+                            </entry>
+                            <entry>
+<key>Conflict Resolution Strategy</key>
+<value>fail</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>PutFile</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style>
+                        <entry>
+                            <key>background-color</key>
+                            <value>#f01818</value>
+                        </entry>
+                    </style>
+                    <type>org.apache.nifi.processors.standard.PutFile</type>
+                </processors>
+                <processors>
+                    <id>09bc3b3d-4548-38be-0000-000000000000</id>
+                    <parentGroupId>0a91525a-1cc0-3fa9-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>787.9999389648438</x>
+                        <y>380.99999237060547</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Group</key>
+<value>
+    <name>Group</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Owner</key>
+<value>
+    <name>Owner</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Create Missing Directories</key>
+<value>
+    <name>Create Missing Directories</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Permissions</key>
+<value>
+    <name>Permissions</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Maximum File Count</key>
+<value>
+    <name>Maximum File Count</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Last Modified Time</key>
+<value>
+    <name>Last Modified Time</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Directory</key>
+<value>
+    <name>Directory</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Conflict Resolution Strategy</key>
+<value>
+    <name>Conflict Resolution Strategy</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Group</key>
+                            </entry>
+                            <entry>
+<key>Owner</key>
+                            </entry>
+                            <entry>
+<key>Create Missing Directories</key>
+<value>true</value>
+                            </entry>
+                            <entry>
+<key>Permissions</key>
+                            </entry>
+                            <entry>
+<key>Maximum File Count</key>
+                            </entry>
+                            <entry>
+<key>Last Modified Time</key>
+                            </entry>
+                            <entry>
+<key>Directory</key>
+                            </entry>
+                            <entry>
+<key>Conflict Resolution Strategy</key>
+<value>fail</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>PutFile</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style>
+                        <entry>
+                            <key>background-color</key>
+                            <value>#2bd126</value>
+                        </entry>
+                    </style>
+                    <type>org.apache.nifi.processors.standard.PutFile</type>
+                </processors>
+                <processors>
+                    <id>1d53975c-3c90-3ae3-0000-000000000000</id>
+                    <parentGroupId>0a91525a-1cc0-3fa9-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>212.99993896484375</x>
+                        <y>92.99999237060547</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>character-set</key>
+<value>
+    <name>character-set</name>
+</value>
+                            </entry>
+                            <entry>
+<key>File Size</key>
+<value>
+    <name>File Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>generate-ff-custom-text</key>
+<value>
+    <name>generate-ff-custom-text</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Batch Size</key>
+<value>
+    <name>Batch Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Unique FlowFiles</key>
+<value>
+    <name>Unique FlowFiles</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Data Format</key>
+<value>
+    <name>Data Format</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>character-set</key>
+<value>UTF-8</value>
+                            </entry>
+                            <entry>
+<key>File Size</key>
+<value>0B</value>
+                            </entry>
+                            <entry>
+<key>generate-ff-custom-text</key>
+<value>&lt;WF_EVENT_T xmlns="http://xmlns.oracle.com/xdb/APPS/Service_XML_Apps"&gt;
+&lt;PRIORITY xmlns=""&gt;60&lt;/PRIORITY&gt;
+&lt;SEND_DATE xmlns=""&gt;2018-01-18T11:52:51.000+0000&lt;/SEND_DATE&gt;
+&lt;RECEIVE_DATE xmlns="" NULL="TRUE"/&gt;
+&lt;CORRELATION_ID xmlns="" NULL="TRUE"/&gt;
+&lt;PARAMETER_LIST xmlns=""/&gt;
+&lt;EVENT_NAME xmlns=""&gt;oracle.apps.ar.hz.Location.update&lt;/EVENT_NAME&gt;
+&lt;EVENT_KEY xmlns=""&gt;oracle.apps.ar.hz.Location.update144487257&lt;/EVENT_KEY&gt;
+&lt;EVENT_DATA xmlns=""&gt;Unique Key&lt;/EVENT_DATA&gt;
+&lt;FROM_AGENT xmlns=""&gt;
+&lt;NAME&gt;WF_BPEL_QAGENT&lt;/NAME&gt;
+&lt;SYSTEM&gt;GPMPRD.AM.HEALTH.GE.COM&lt;/SYSTEM&gt;
+&lt;/FROM_AGENT&gt;
+&lt;TO_AGENT xmlns="" NULL="TRUE"/&gt;
+&lt;ERROR_SUBSCRIPTION xmlns="" NULL="TRUE"/&gt;
+&lt;ERROR_MESSAGE xmlns="" NULL="TRUE"/&gt;
+&lt;ERROR_STACK xmlns="" NULL="TRUE"/&gt;
+&lt;/WF_EVENT_T&gt;</value>
+                            </entry>
+                            <entry>
+<key>Batch Size</key>
+<value>1</value>
+                            </entry>
+                            <entry>
+<key>Unique FlowFiles</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>Data Format</key>
+<value>Text</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>1000 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>CreateEventPayload</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style>
+                        <entry>
+                            <key>background-color</key>
+                            <value>#234dc2</value>
+                        </entry>
+                    </style>
+                    <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
+                </processors>
+                <processors>
+                    <id>52e01d3e-eec0-3377-0000-000000000000</id>
+                    <parentGroupId>0a91525a-1cc0-3fa9-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>189.19198608398438</x>
+                        <y>848.6480026245117</y>
+                    </position>
+                    <bundle>
+                        <artifact>tc-aq-nar</artifact>
+                        <group>ge.digital.tc</group>
+                        <version>2.0.0-SNAPSHOT</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Database Schema</key>
+<value>
+    <name>Database Schema</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Consumer</key>
+<value>
+    <name>Consumer</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Polling Interval</key>
+<value>
+    <name>Polling Interval</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Message Selector Rule</key>
+<value>
+    <name>Message Selector Rule</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Dequeue Timeout</key>
+<value>
+    <name>Dequeue Timeout</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Database Connection Pooling Service</key>
+<value>
+    <identifiesControllerService>ge.digital.tc.oracleservice.OracleService</identifiesControllerService>
+    <name>Database Connection Pooling Service</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Queue</key>
+<value>
+    <name>Queue</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Correlation Identifier</key>
+<value>
+    <name>Correlation Identifier</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Payload Size Threshold</key>
+<value>
+    <name>Payload Size Threshold</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Database Schema</key>
+<value>APPS</value>
+                            </entry>
+                            <entry>
+<key>Consumer</key>
+<value>THREADCONNECT</value>
+                            </entry>
+                            <entry>
+<key>Polling Interval</key>
+<value>10 secs</value>
+                            </entry>
+                            <entry>
+<key>Message Selector Rule</key>
+<value>tab.user_data.event_name = 'oracle.apps.ar.hz.Location.update'</value>
+                            </entry>
+                            <entry>
+<key>Dequeue Timeout</key>
+<value>2</value>
+                            </entry>
+                            <entry>
+<key>Database Connection Pooling Service</key>
+<value>ac0fc2bf-0f2e-3dcf-0000-000000000000</value>
+                            </entry>
+                            <entry>
+<key>Queue</key>
+<value>WF_BPEL_Q</value>
+                            </entry>
+                            <entry>
+<key>Correlation Identifier</key>
+                            </entry>
+                            <entry>
+<key>Payload Size Threshold</key>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>ConsumeAQ</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>Success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style>
+                        <entry>
+                            <key>background-color</key>
+                            <value>#234dc2</value>
+                        </entry>
+                    </style>
+                    <type>ge.digital.tc.processors.aq.ConsumeAQ</type>
+                </processors>
+                <processors>
+                    <id>7fe22f8f-7f54-3412-0000-000000000000</id>
+                    <parentGroupId>0a91525a-1cc0-3fa9-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>787.9999389648438</x>
+                        <y>90.0</y>
+                    </position>
+                    <bundle>
+                        <artifact>tc-aq-nar</artifact>
+                        <group>ge.digital.tc</group>
+                        <version>2.0.0-SNAPSHOT</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Message Priority</key>
+<value>
+    <name>Message Priority</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Delay Interval</key>
+<value>
+    <name>Delay Interval</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Database Schema</key>
+<value>
+    <name>Database Schema</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Database Connection Pooling Service</key>
+<value>
+    <identifiesControllerService>ge.digital.tc.oracleservice.OracleService</identifiesControllerService>
+    <name>Database Connection Pooling Service</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Expiration Interval</key>
+<value>
+    <name>Expiration Interval</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Recipient List</key>
+<value>
+    <name>Recipient List</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Exception Queue</key>
+<value>
+    <name>Exception Queue</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Queue</key>
+<value>
+    <name>Queue</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Correlation Identifier</key>
+<value>
+    <name>Correlation Identifier</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Message Priority</key>
+                            </entry>
+                            <entry>
+<key>Delay Interval</key>
+                            </entry>
+                            <entry>
+<key>Database Schema</key>
+<value>APPS</value>
+                            </entry>
+                            <entry>
+<key>Database Connection Pooling Service</key>
+<value>6cc6ba51-68e9-372f-0000-000000000000</value>
+                            </entry>
+                            <entry>
+<key>Expiration Interval</key>
+<value>-1</value>
+                            </entry>
+                            <entry>
+<key>Recipient List</key>
+<value>THREADCONNECT</value>
+                            </entry>
+                            <entry>
+<key>Exception Queue</key>
+                            </entry>
+                            <entry>
+<key>Queue</key>
+<value>WF_BPEL_Q</value>
+                            </entry>
+                            <entry>
+<key>Correlation Identifier</key>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>PublishAQ</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>Failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>Original</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>Success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style>
+                        <entry>
+                            <key>background-color</key>
+                            <value>#234dc2</value>
+                        </entry>
+                    </style>
+                    <type>ge.digital.tc.processors.aq.PublishAQ</type>
+                </processors>
+            </contents>
+            <name>Oracle AQ</name>
+            <variables/>
+        </processGroups>
+    </snippet>
+    <timestamp>08/28/2018 14:50:23 IST</timestamp>
+</template>

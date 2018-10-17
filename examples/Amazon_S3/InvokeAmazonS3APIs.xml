@@ -1,0 +1,1196 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template encoding-version="1.2">
+    <description>- Utilizing Amazon S3 REST API to get/post</description>
+    <groupId>33e0a4c3-0165-1000-0000-00000294a44b</groupId>
+    <name>InvokeAmazonS3APIs</name>
+    <snippet>
+        <processGroups>
+            <id>97fb3099-7021-3097-0000-000000000000</id>
+            <parentGroupId>61f162e4-3082-3c3e-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.0</x>
+                <y>0.0</y>
+            </position>
+            <comments></comments>
+            <contents>
+                <processGroups>
+                    <id>eaaccf6d-a8a4-3b93-0000-000000000000</id>
+                    <parentGroupId>97fb3099-7021-3097-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-86.68055719126824</x>
+                        <y>-55.67343709908127</y>
+                    </position>
+                    <comments></comments>
+                    <contents>
+                        <connections>
+                            <id>a9eb00b9-3269-39d6-0000-000000000000</id>
+                            <parentGroupId>eaaccf6d-a8a4-3b93-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>32607603-5de3-34ea-0000-000000000000</groupId>
+<id>ba20de9f-f052-34fa-0000-000000000000</id>
+<type>INPUT_PORT</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <name></name>
+                            <selectedRelationships>success</selectedRelationships>
+                            <source>
+<groupId>eaaccf6d-a8a4-3b93-0000-000000000000</groupId>
+<id>1def4793-f8aa-3209-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>f477d473-d553-3f2c-0000-000000000000</id>
+                            <parentGroupId>eaaccf6d-a8a4-3b93-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>eaaccf6d-a8a4-3b93-0000-000000000000</groupId>
+<id>1def4793-f8aa-3209-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>0</labelIndex>
+                            <name></name>
+                            <selectedRelationships>success</selectedRelationships>
+                            <source>
+<groupId>eaaccf6d-a8a4-3b93-0000-000000000000</groupId>
+<id>9d8d9652-c388-3530-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>2e458c9b-8797-3765-0000-000000000000</id>
+                            <parentGroupId>eaaccf6d-a8a4-3b93-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>6d3b7dbd-b49d-3598-0000-000000000000</groupId>
+<id>7c7f4d50-858b-3ce1-0000-000000000000</id>
+<type>INPUT_PORT</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <name></name>
+                            <selectedRelationships>failure</selectedRelationships>
+                            <source>
+<groupId>eaaccf6d-a8a4-3b93-0000-000000000000</groupId>
+<id>1def4793-f8aa-3209-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <labels>
+                            <id>b0e2ec47-2e69-356c-0000-000000000000</id>
+                            <parentGroupId>eaaccf6d-a8a4-3b93-0000-000000000000</parentGroupId>
+                            <position>
+<x>-678.7659722940921</x>
+<y>-201.71994256953087</y>
+                            </position>
+                            <height>57.457576751708984</height>
+                            <label>INVOKE AMAZON S3
+          POST API</label>
+                            <style>
+<entry>
+    <key>font-size</key>
+    <value>18px</value>
+</entry>
+                            </style>
+                            <width>188.17437744140625</width>
+                        </labels>
+                        <labels>
+                            <id>c7cb1acb-467f-3134-0000-000000000000</id>
+                            <parentGroupId>eaaccf6d-a8a4-3b93-0000-000000000000</parentGroupId>
+                            <position>
+<x>-949.3932451383291</x>
+<y>-63.453828213259044</y>
+                            </position>
+                            <height>51.63469696044922</height>
+                            <label>- Generates generic flow files
+- Inputs "This is text." as the 
+  file's content</label>
+                            <style>
+<entry>
+    <key>font-size</key>
+    <value>12px</value>
+</entry>
+                            </style>
+                            <width>169.83023071289062</width>
+                        </labels>
+                        <labels>
+                            <id>1d2e8ab4-dab3-3c1d-0000-000000000000</id>
+                            <parentGroupId>eaaccf6d-a8a4-3b93-0000-000000000000</parentGroupId>
+                            <position>
+<x>-959.7958902494131</x>
+<y>154.43534040685051</y>
+                            </position>
+                            <height>87.24930572509766</height>
+                            <label>- Uploads each generated flow  
+  file to a specified Amazon S3 
+  Bucket (bucket-name)
+- Upload method depends on 
+  file size (&gt;5GB)</label>
+                            <style>
+<entry>
+    <key>font-size</key>
+    <value>12px</value>
+</entry>
+                            </style>
+                            <width>184.63365173339844</width>
+                        </labels>
+                        <processGroups>
+                            <id>32607603-5de3-34ea-0000-000000000000</id>
+                            <parentGroupId>eaaccf6d-a8a4-3b93-0000-000000000000</parentGroupId>
+                            <position>
+<x>-505.3214131898628</x>
+<y>437.1013642751759</y>
+                            </position>
+                            <comments></comments>
+                            <contents>
+<inputPorts>
+    <id>ba20de9f-f052-34fa-0000-000000000000</id>
+    <parentGroupId>32607603-5de3-34ea-0000-000000000000</parentGroupId>
+    <position>
+        <x>384.9999344416208</x>
+        <y>69.99999598015984</y>
+    </position>
+    <comments></comments>
+    <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+    <name>From Success Queue</name>
+    <state>STOPPED</state>
+    <type>INPUT_PORT</type>
+    <validationErrors>'Port 'From Success Queue'' is invalid because Output connection for port 'From Success Queue' is not defined.</validationErrors>
+</inputPorts>
+                            </contents>
+                            <name>Continue Flow</name>
+                            <variables/>
+                        </processGroups>
+                        <processGroups>
+                            <id>6d3b7dbd-b49d-3598-0000-000000000000</id>
+                            <parentGroupId>eaaccf6d-a8a4-3b93-0000-000000000000</parentGroupId>
+                            <position>
+<x>-1032.6741557597697</x>
+<y>437.2992451672851</y>
+                            </position>
+                            <comments></comments>
+                            <contents>
+<inputPorts>
+    <id>7c7f4d50-858b-3ce1-0000-000000000000</id>
+    <parentGroupId>6d3b7dbd-b49d-3598-0000-000000000000</parentGroupId>
+    <position>
+        <x>581.9999947171655</x>
+        <y>250.99999977144773</y>
+    </position>
+    <comments></comments>
+    <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+    <name>From Fail Queue</name>
+    <state>STOPPED</state>
+    <type>INPUT_PORT</type>
+    <validationErrors>'Port 'From Fail Queue'' is invalid because Output connection for port 'From Fail Queue' is not defined.</validationErrors>
+</inputPorts>
+                            </contents>
+                            <name>Handle Failure</name>
+                            <variables/>
+                        </processGroups>
+                        <processors>
+                            <id>9d8d9652-c388-3530-0000-000000000000</id>
+                            <parentGroupId>eaaccf6d-a8a4-3b93-0000-000000000000</parentGroupId>
+                            <position>
+<x>-756.3413736723255</x>
+<y>-100.47358669190965</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-standard-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.5.0</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>File Size</key>
+        <value>
+            <name>File Size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Batch Size</key>
+        <value>
+            <name>Batch Size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Data Format</key>
+        <value>
+            <name>Data Format</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Unique FlowFiles</key>
+        <value>
+            <name>Unique FlowFiles</name>
+        </value>
+    </entry>
+    <entry>
+        <key>generate-ff-custom-text</key>
+        <value>
+            <name>generate-ff-custom-text</name>
+        </value>
+    </entry>
+    <entry>
+        <key>character-set</key>
+        <value>
+            <name>character-set</name>
+        </value>
+    </entry>
+    <entry>
+        <key>filename</key>
+        <value>
+            <name>filename</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>File Size</key>
+        <value>0B</value>
+    </entry>
+    <entry>
+        <key>Batch Size</key>
+        <value>1</value>
+    </entry>
+    <entry>
+        <key>Data Format</key>
+        <value>Text</value>
+    </entry>
+    <entry>
+        <key>Unique FlowFiles</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>generate-ff-custom-text</key>
+        <value>This is text.</value>
+    </entry>
+    <entry>
+        <key>character-set</key>
+        <value>UTF-8</value>
+    </entry>
+    <entry>
+        <key>filename</key>
+        <value>some_file.txt</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>30 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <name>GenerateFlowFile</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
+                        </processors>
+                        <processors>
+                            <id>1def4793-f8aa-3209-0000-000000000000</id>
+                            <parentGroupId>eaaccf6d-a8a4-3b93-0000-000000000000</parentGroupId>
+                            <position>
+<x>-755.2061955839663</x>
+<y>139.82859457827664</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-aws-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.5.0</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>Object Key</key>
+        <value>
+            <name>Object Key</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Bucket</key>
+        <value>
+            <name>Bucket</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Content Type</key>
+        <value>
+            <name>Content Type</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Access Key</key>
+        <value>
+            <name>Access Key</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Secret Key</key>
+        <value>
+            <name>Secret Key</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Credentials File</key>
+        <value>
+            <name>Credentials File</name>
+        </value>
+    </entry>
+    <entry>
+        <key>AWS Credentials Provider service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.processors.aws.credentials.provider.service.AWSCredentialsProviderService</identifiesControllerService>
+            <name>AWS Credentials Provider service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Storage Class</key>
+        <value>
+            <name>Storage Class</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Region</key>
+        <value>
+            <name>Region</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Communications Timeout</key>
+        <value>
+            <name>Communications Timeout</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Expiration Time Rule</key>
+        <value>
+            <name>Expiration Time Rule</name>
+        </value>
+    </entry>
+    <entry>
+        <key>FullControl User List</key>
+        <value>
+            <name>FullControl User List</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Read Permission User List</key>
+        <value>
+            <name>Read Permission User List</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Write Permission User List</key>
+        <value>
+            <name>Write Permission User List</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Read ACL User List</key>
+        <value>
+            <name>Read ACL User List</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Write ACL User List</key>
+        <value>
+            <name>Write ACL User List</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Owner</key>
+        <value>
+            <name>Owner</name>
+        </value>
+    </entry>
+    <entry>
+        <key>canned-acl</key>
+        <value>
+            <name>canned-acl</name>
+        </value>
+    </entry>
+    <entry>
+        <key>SSL Context Service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+            <name>SSL Context Service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Endpoint Override URL</key>
+        <value>
+            <name>Endpoint Override URL</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Signer Override</key>
+        <value>
+            <name>Signer Override</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Multipart Threshold</key>
+        <value>
+            <name>Multipart Threshold</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Multipart Part Size</key>
+        <value>
+            <name>Multipart Part Size</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Multipart Upload AgeOff Interval</key>
+        <value>
+            <name>Multipart Upload AgeOff Interval</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Multipart Upload Max Age Threshold</key>
+        <value>
+            <name>Multipart Upload Max Age Threshold</name>
+        </value>
+    </entry>
+    <entry>
+        <key>server-side-encryption</key>
+        <value>
+            <name>server-side-encryption</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Proxy Host</key>
+        <value>
+            <name>Proxy Host</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Proxy Host Port</key>
+        <value>
+            <name>Proxy Host Port</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>Object Key</key>
+        <value>${filename}</value>
+    </entry>
+    <entry>
+        <key>Bucket</key>
+        <value>bucket-name</value>
+    </entry>
+    <entry>
+        <key>Content Type</key>
+    </entry>
+    <entry>
+        <key>Access Key</key>
+    </entry>
+    <entry>
+        <key>Secret Key</key>
+    </entry>
+    <entry>
+        <key>Credentials File</key>
+    </entry>
+    <entry>
+        <key>AWS Credentials Provider service</key>
+    </entry>
+    <entry>
+        <key>Storage Class</key>
+        <value>Standard</value>
+    </entry>
+    <entry>
+        <key>Region</key>
+        <value>us-west-2</value>
+    </entry>
+    <entry>
+        <key>Communications Timeout</key>
+        <value>30 secs</value>
+    </entry>
+    <entry>
+        <key>Expiration Time Rule</key>
+    </entry>
+    <entry>
+        <key>FullControl User List</key>
+        <value>${s3.permissions.full.users}</value>
+    </entry>
+    <entry>
+        <key>Read Permission User List</key>
+        <value>${s3.permissions.read.users}</value>
+    </entry>
+    <entry>
+        <key>Write Permission User List</key>
+        <value>${s3.permissions.write.users}</value>
+    </entry>
+    <entry>
+        <key>Read ACL User List</key>
+        <value>${s3.permissions.readacl.users}</value>
+    </entry>
+    <entry>
+        <key>Write ACL User List</key>
+        <value>${s3.permissions.writeacl.users}</value>
+    </entry>
+    <entry>
+        <key>Owner</key>
+        <value>${s3.owner}</value>
+    </entry>
+    <entry>
+        <key>canned-acl</key>
+        <value>${s3.permissions.cannedacl}</value>
+    </entry>
+    <entry>
+        <key>SSL Context Service</key>
+    </entry>
+    <entry>
+        <key>Endpoint Override URL</key>
+    </entry>
+    <entry>
+        <key>Signer Override</key>
+        <value>Default Signature</value>
+    </entry>
+    <entry>
+        <key>Multipart Threshold</key>
+        <value>60 MB</value>
+    </entry>
+    <entry>
+        <key>Multipart Part Size</key>
+        <value>5 GB</value>
+    </entry>
+    <entry>
+        <key>Multipart Upload AgeOff Interval</key>
+        <value>60 min</value>
+    </entry>
+    <entry>
+        <key>Multipart Upload Max Age Threshold</key>
+        <value>7 days</value>
+    </entry>
+    <entry>
+        <key>server-side-encryption</key>
+        <value>None</value>
+    </entry>
+    <entry>
+        <key>Proxy Host</key>
+    </entry>
+    <entry>
+        <key>Proxy Host Port</key>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <name>PutS3Object</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>failure</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.aws.s3.PutS3Object</type>
+                        </processors>
+                    </contents>
+                    <name>POST API</name>
+                    <variables/>
+                </processGroups>
+                <processGroups>
+                    <id>47ff0bdb-c305-3333-0000-000000000000</id>
+                    <parentGroupId>97fb3099-7021-3097-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-84.20079879127002</x>
+                        <y>-279.85211287561043</y>
+                    </position>
+                    <comments></comments>
+                    <contents>
+                        <connections>
+                            <id>e391feb7-9e81-37a6-0000-000000000000</id>
+                            <parentGroupId>47ff0bdb-c305-3333-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>2bb23679-9049-3c6b-0000-000000000000</groupId>
+<id>341ba775-4c45-3ebe-0000-000000000000</id>
+<type>INPUT_PORT</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <name></name>
+                            <selectedRelationships>success</selectedRelationships>
+                            <source>
+<groupId>47ff0bdb-c305-3333-0000-000000000000</groupId>
+<id>09e9b271-680e-3d14-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>273fae36-3716-3dc1-0000-000000000000</id>
+                            <parentGroupId>47ff0bdb-c305-3333-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>8ab6c260-741c-3053-0000-000000000000</groupId>
+<id>669b0e19-dde8-34b2-0000-000000000000</id>
+<type>INPUT_PORT</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <name></name>
+                            <selectedRelationships>failure</selectedRelationships>
+                            <source>
+<groupId>47ff0bdb-c305-3333-0000-000000000000</groupId>
+<id>09e9b271-680e-3d14-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <connections>
+                            <id>35bdc798-0434-38c8-0000-000000000000</id>
+                            <parentGroupId>47ff0bdb-c305-3333-0000-000000000000</parentGroupId>
+                            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                            <destination>
+<groupId>47ff0bdb-c305-3333-0000-000000000000</groupId>
+<id>09e9b271-680e-3d14-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </destination>
+                            <flowFileExpiration>0 sec</flowFileExpiration>
+                            <labelIndex>1</labelIndex>
+                            <name></name>
+                            <selectedRelationships>success</selectedRelationships>
+                            <source>
+<groupId>47ff0bdb-c305-3333-0000-000000000000</groupId>
+<id>8577bed9-a3a4-36ff-0000-000000000000</id>
+<type>PROCESSOR</type>
+                            </source>
+                            <zIndex>0</zIndex>
+                        </connections>
+                        <labels>
+                            <id>d0ec676d-e221-32de-0000-000000000000</id>
+                            <parentGroupId>47ff0bdb-c305-3333-0000-000000000000</parentGroupId>
+                            <position>
+<x>619.6933489664375</x>
+<y>6.996468427137074</y>
+                            </position>
+                            <height>94.30498504638672</height>
+                            <label>- Pulls object list from 
+  specified S3 bucket 
+  (exelon-bucket)
+- Creates flow file for 
+  each object (to send 
+  to FetchS3Object)</label>
+                            <style>
+<entry>
+    <key>font-size</key>
+    <value>12px</value>
+</entry>
+                            </style>
+                            <width>135.5411376953125</width>
+                        </labels>
+                        <labels>
+                            <id>3004b3dd-7c6e-342b-0000-000000000000</id>
+                            <parentGroupId>47ff0bdb-c305-3333-0000-000000000000</parentGroupId>
+                            <position>
+<x>868.6806219441892</x>
+<y>-104.2926106450924</y>
+                            </position>
+                            <height>54.47709274291992</height>
+                            <label>INVOKE AMAZON S3
+           GET API</label>
+                            <style>
+<entry>
+    <key>font-size</key>
+    <value>18px</value>
+</entry>
+                            </style>
+                            <width>187.41427612304688</width>
+                        </labels>
+                        <labels>
+                            <id>76e998e2-474c-310d-0000-000000000000</id>
+                            <parentGroupId>47ff0bdb-c305-3333-0000-000000000000</parentGroupId>
+                            <position>
+<x>593.1263934000312</x>
+<y>277.62268150086754</y>
+                            </position>
+                            <height>53.79104232788086</height>
+                            <label>- Pulls content from the 
+  S3 object and writes it 
+  to content of the FlowFile</label>
+                            <style>
+<entry>
+    <key>font-size</key>
+    <value>12px</value>
+</entry>
+                            </style>
+                            <width>155.80137634277344</width>
+                        </labels>
+                        <processGroups>
+                            <id>8ab6c260-741c-3053-0000-000000000000</id>
+                            <parentGroupId>47ff0bdb-c305-3333-0000-000000000000</parentGroupId>
+                            <position>
+<x>542.7431377888142</x>
+<y>526.390034962207</y>
+                            </position>
+                            <comments></comments>
+                            <contents>
+<inputPorts>
+    <id>669b0e19-dde8-34b2-0000-000000000000</id>
+    <parentGroupId>8ab6c260-741c-3053-0000-000000000000</parentGroupId>
+    <position>
+        <x>581.9999947171655</x>
+        <y>250.99999977144773</y>
+    </position>
+    <comments></comments>
+    <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+    <name>Incoming Fail Queue</name>
+    <state>STOPPED</state>
+    <type>INPUT_PORT</type>
+    <validationErrors>'Port 'Incoming Fail Queue'' is invalid because Output connection for port 'Incoming Fail Queue' is not defined.</validationErrors>
+</inputPorts>
+<outputPorts>
+    <id>dedaf72b-fc17-3538-0000-000000000000</id>
+    <parentGroupId>8ab6c260-741c-3053-0000-000000000000</parentGroupId>
+    <position>
+        <x>584.3832619818426</x>
+        <y>481.263935654254</y>
+    </position>
+    <comments></comments>
+    <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+    <name>Fixed Failures</name>
+    <state>STOPPED</state>
+    <type>OUTPUT_PORT</type>
+    <validationErrors>'Port 'Fixed Failures'' is invalid because Output connection for port 'Fixed Failures' is not defined.</validationErrors>
+</outputPorts>
+                            </contents>
+                            <name>Handle Failure</name>
+                            <variables/>
+                        </processGroups>
+                        <processGroups>
+                            <id>2bb23679-9049-3c6b-0000-000000000000</id>
+                            <parentGroupId>47ff0bdb-c305-3333-0000-000000000000</parentGroupId>
+                            <position>
+<x>1022.7837809019338</x>
+<y>528.6619111501759</y>
+                            </position>
+                            <comments></comments>
+                            <contents>
+<inputPorts>
+    <id>341ba775-4c45-3ebe-0000-000000000000</id>
+    <parentGroupId>2bb23679-9049-3c6b-0000-000000000000</parentGroupId>
+    <position>
+        <x>384.9999344416208</x>
+        <y>69.99999598015984</y>
+    </position>
+    <comments></comments>
+    <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+    <name>From Success Queue</name>
+    <state>STOPPED</state>
+    <type>INPUT_PORT</type>
+    <validationErrors>'Port 'From Success Queue'' is invalid because Output connection for port 'From Success Queue' is not defined.</validationErrors>
+</inputPorts>
+                            </contents>
+                            <name>Continue Flow</name>
+                            <variables/>
+                        </processGroups>
+                        <processors>
+                            <id>8577bed9-a3a4-36ff-0000-000000000000</id>
+                            <parentGroupId>47ff0bdb-c305-3333-0000-000000000000</parentGroupId>
+                            <position>
+<x>787.2018206695825</x>
+<y>-9.992520311239446</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-aws-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.5.0</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>Bucket</key>
+        <value>
+            <name>Bucket</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Region</key>
+        <value>
+            <name>Region</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Access Key</key>
+        <value>
+            <name>Access Key</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Secret Key</key>
+        <value>
+            <name>Secret Key</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Credentials File</key>
+        <value>
+            <name>Credentials File</name>
+        </value>
+    </entry>
+    <entry>
+        <key>AWS Credentials Provider service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.processors.aws.credentials.provider.service.AWSCredentialsProviderService</identifiesControllerService>
+            <name>AWS Credentials Provider service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Communications Timeout</key>
+        <value>
+            <name>Communications Timeout</name>
+        </value>
+    </entry>
+    <entry>
+        <key>SSL Context Service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+            <name>SSL Context Service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Endpoint Override URL</key>
+        <value>
+            <name>Endpoint Override URL</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Signer Override</key>
+        <value>
+            <name>Signer Override</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Proxy Host</key>
+        <value>
+            <name>Proxy Host</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Proxy Host Port</key>
+        <value>
+            <name>Proxy Host Port</name>
+        </value>
+    </entry>
+    <entry>
+        <key>delimiter</key>
+        <value>
+            <name>delimiter</name>
+        </value>
+    </entry>
+    <entry>
+        <key>prefix</key>
+        <value>
+            <name>prefix</name>
+        </value>
+    </entry>
+    <entry>
+        <key>use-versions</key>
+        <value>
+            <name>use-versions</name>
+        </value>
+    </entry>
+    <entry>
+        <key>list-type</key>
+        <value>
+            <name>list-type</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>Bucket</key>
+        <value>exelon-bucket</value>
+    </entry>
+    <entry>
+        <key>Region</key>
+        <value>us-west-2</value>
+    </entry>
+    <entry>
+        <key>Access Key</key>
+    </entry>
+    <entry>
+        <key>Secret Key</key>
+    </entry>
+    <entry>
+        <key>Credentials File</key>
+    </entry>
+    <entry>
+        <key>AWS Credentials Provider service</key>
+    </entry>
+    <entry>
+        <key>Communications Timeout</key>
+        <value>30 secs</value>
+    </entry>
+    <entry>
+        <key>SSL Context Service</key>
+    </entry>
+    <entry>
+        <key>Endpoint Override URL</key>
+    </entry>
+    <entry>
+        <key>Signer Override</key>
+        <value>Default Signature</value>
+    </entry>
+    <entry>
+        <key>Proxy Host</key>
+    </entry>
+    <entry>
+        <key>Proxy Host Port</key>
+    </entry>
+    <entry>
+        <key>delimiter</key>
+    </entry>
+    <entry>
+        <key>prefix</key>
+    </entry>
+    <entry>
+        <key>use-versions</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>list-type</key>
+        <value>1</value>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>0 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <name>ListS3</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.aws.s3.ListS3</type>
+                        </processors>
+                        <processors>
+                            <id>09e9b271-680e-3d14-0000-000000000000</id>
+                            <parentGroupId>47ff0bdb-c305-3333-0000-000000000000</parentGroupId>
+                            <position>
+<x>786.5599092140005</x>
+<y>243.82855547936816</y>
+                            </position>
+                            <bundle>
+<artifact>nifi-aws-nar</artifact>
+<group>org.apache.nifi</group>
+<version>1.5.0</version>
+                            </bundle>
+                            <config>
+<bulletinLevel>WARN</bulletinLevel>
+<comments></comments>
+<concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+<descriptors>
+    <entry>
+        <key>Bucket</key>
+        <value>
+            <name>Bucket</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Object Key</key>
+        <value>
+            <name>Object Key</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Region</key>
+        <value>
+            <name>Region</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Access Key</key>
+        <value>
+            <name>Access Key</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Secret Key</key>
+        <value>
+            <name>Secret Key</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Credentials File</key>
+        <value>
+            <name>Credentials File</name>
+        </value>
+    </entry>
+    <entry>
+        <key>AWS Credentials Provider service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.processors.aws.credentials.provider.service.AWSCredentialsProviderService</identifiesControllerService>
+            <name>AWS Credentials Provider service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Communications Timeout</key>
+        <value>
+            <name>Communications Timeout</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Version</key>
+        <value>
+            <name>Version</name>
+        </value>
+    </entry>
+    <entry>
+        <key>SSL Context Service</key>
+        <value>
+            <identifiesControllerService>org.apache.nifi.ssl.SSLContextService</identifiesControllerService>
+            <name>SSL Context Service</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Endpoint Override URL</key>
+        <value>
+            <name>Endpoint Override URL</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Signer Override</key>
+        <value>
+            <name>Signer Override</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Proxy Host</key>
+        <value>
+            <name>Proxy Host</name>
+        </value>
+    </entry>
+    <entry>
+        <key>Proxy Host Port</key>
+        <value>
+            <name>Proxy Host Port</name>
+        </value>
+    </entry>
+</descriptors>
+<executionNode>ALL</executionNode>
+<lossTolerant>false</lossTolerant>
+<penaltyDuration>30 sec</penaltyDuration>
+<properties>
+    <entry>
+        <key>Bucket</key>
+        <value>exelon-bucket</value>
+    </entry>
+    <entry>
+        <key>Object Key</key>
+        <value>${filename}</value>
+    </entry>
+    <entry>
+        <key>Region</key>
+        <value>us-west-2</value>
+    </entry>
+    <entry>
+        <key>Access Key</key>
+    </entry>
+    <entry>
+        <key>Secret Key</key>
+    </entry>
+    <entry>
+        <key>Credentials File</key>
+    </entry>
+    <entry>
+        <key>AWS Credentials Provider service</key>
+    </entry>
+    <entry>
+        <key>Communications Timeout</key>
+        <value>30 secs</value>
+    </entry>
+    <entry>
+        <key>Version</key>
+    </entry>
+    <entry>
+        <key>SSL Context Service</key>
+    </entry>
+    <entry>
+        <key>Endpoint Override URL</key>
+    </entry>
+    <entry>
+        <key>Signer Override</key>
+        <value>Default Signature</value>
+    </entry>
+    <entry>
+        <key>Proxy Host</key>
+    </entry>
+    <entry>
+        <key>Proxy Host Port</key>
+    </entry>
+</properties>
+<runDurationMillis>0</runDurationMillis>
+<schedulingPeriod>1 sec</schedulingPeriod>
+<schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+<yieldDuration>1 sec</yieldDuration>
+                            </config>
+                            <name>FetchS3Object</name>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>failure</name>
+                            </relationships>
+                            <relationships>
+<autoTerminate>false</autoTerminate>
+<name>success</name>
+                            </relationships>
+                            <state>STOPPED</state>
+                            <style/>
+                            <type>org.apache.nifi.processors.aws.s3.FetchS3Object</type>
+                        </processors>
+                    </contents>
+                    <name>GET API</name>
+                    <variables/>
+                </processGroups>
+            </contents>
+            <name>Invoke Amazon S3 APIs</name>
+            <variables/>
+        </processGroups>
+    </snippet>
+    <timestamp>08/21/2018 14:36:24 UTC</timestamp>
+</template>

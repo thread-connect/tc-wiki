@@ -1,0 +1,789 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template encoding-version="1.2">
+    <description>Integration with Oracle Ebiz using ExecutePLSQL Processor</description>
+    <groupId>b3703432-0162-1000-2257-b801ac07e748</groupId>
+    <name>Oracle E-Business Suite Integration</name>
+    <snippet>
+        <labels>
+            <id>a7021bf7-22cd-3973-0000-000000000000</id>
+            <parentGroupId>8698d4a8-8b04-3a6f-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.0</x>
+                <y>0.0</y>
+            </position>
+            <height>30.699007034301758</height>
+            <label>Integration with Oracle E-Business Suite</label>
+            <style>
+                <entry>
+                    <key>font-size</key>
+                    <value>16px</value>
+                </entry>
+            </style>
+            <width>309.7807312011719</width>
+        </labels>
+        <processGroups>
+            <id>3c13ef0d-de03-3c93-0000-000000000000</id>
+            <parentGroupId>8698d4a8-8b04-3a6f-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.03430203051425451</x>
+                <y>65.26225321562231</y>
+            </position>
+            <comments></comments>
+            <contents>
+                <connections>
+                    <id>832af5d4-600c-3861-0000-000000000000</id>
+                    <parentGroupId>3c13ef0d-de03-3c93-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <bends>
+                        <x>1198.0000196297278</x>
+                        <y>86.00000094453031</y>
+                    </bends>
+                    <bends>
+                        <x>1198.0000196297278</x>
+                        <y>136.0000009445303</y>
+                    </bends>
+                    <destination>
+                        <groupId>3c13ef0d-de03-3c93-0000-000000000000</groupId>
+                        <id>1e67102f-8952-3117-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>Retry</selectedRelationships>
+                    <source>
+                        <groupId>3c13ef0d-de03-3c93-0000-000000000000</groupId>
+                        <id>1e67102f-8952-3117-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>e07cb54a-f07b-3e71-0000-000000000000</id>
+                    <parentGroupId>3c13ef0d-de03-3c93-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>3c13ef0d-de03-3c93-0000-000000000000</groupId>
+                        <id>33c69f11-be13-3d06-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>Success</selectedRelationships>
+                    <source>
+                        <groupId>3c13ef0d-de03-3c93-0000-000000000000</groupId>
+                        <id>1e67102f-8952-3117-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>00bbb5eb-9f85-3cc5-0000-000000000000</id>
+                    <parentGroupId>3c13ef0d-de03-3c93-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>3c13ef0d-de03-3c93-0000-000000000000</groupId>
+                        <id>61f4be6b-02c9-3604-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>Failure</selectedRelationships>
+                    <source>
+                        <groupId>3c13ef0d-de03-3c93-0000-000000000000</groupId>
+                        <id>1e67102f-8952-3117-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>2bc76eff-9ebf-341f-0000-000000000000</id>
+                    <parentGroupId>3c13ef0d-de03-3c93-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>3c13ef0d-de03-3c93-0000-000000000000</groupId>
+                        <id>1e67102f-8952-3117-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>3c13ef0d-de03-3c93-0000-000000000000</groupId>
+                        <id>95723e7f-4e11-30bd-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <controllerServices>
+                    <id>f2441997-4530-328f-0000-000000000000</id>
+                    <parentGroupId>3c13ef0d-de03-3c93-0000-000000000000</parentGroupId>
+                    <bundle>
+                        <artifact>tc-oracle-connector-nar</artifact>
+                        <group>ge.digital.tc</group>
+                        <version>2.0.0-SNAPSHOT</version>
+                    </bundle>
+                    <comments></comments>
+                    <descriptors>
+                        <entry>
+                            <key>Database Connection URL</key>
+                            <value>
+<name>Database Connection URL</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>User Name</key>
+                            <value>
+<name>User Name</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Password</key>
+                            <value>
+<name>Password</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Initial Pool Size</key>
+                            <value>
+<name>Initial Pool Size</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Min Pool Size</key>
+                            <value>
+<name>Min Pool Size</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Max Pool Size</key>
+                            <value>
+<name>Max Pool Size</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Max Wait Time</key>
+                            <value>
+<name>Max Wait Time</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Validation-query</key>
+                            <value>
+<name>Validation-query</name>
+                            </value>
+                        </entry>
+                    </descriptors>
+                    <name>OracleConnection</name>
+                    <persistsState>false</persistsState>
+                    <properties>
+                        <entry>
+                            <key>Database Connection URL</key>
+                            <value>jdbc:oracle:thin:@hostname:port/service_name</value>
+                        </entry>
+                        <entry>
+                            <key>User Name</key>
+                            <value>username</value>
+                        </entry>
+                        <entry>
+                            <key>Password</key>
+                        </entry>
+                        <entry>
+                            <key>Initial Pool Size</key>
+                            <value>3</value>
+                        </entry>
+                        <entry>
+                            <key>Min Pool Size</key>
+                            <value>5</value>
+                        </entry>
+                        <entry>
+                            <key>Max Pool Size</key>
+                            <value>10</value>
+                        </entry>
+                        <entry>
+                            <key>Max Wait Time</key>
+                            <value>10</value>
+                        </entry>
+                        <entry>
+                            <key>Validation-query</key>
+                            <value>select * from dual</value>
+                        </entry>
+                    </properties>
+                    <state>DISABLED</state>
+                    <type>ge.digital.tc.oracleservice.OracleConnection</type>
+                </controllerServices>
+                <labels>
+                    <id>acea2bad-60be-3fa1-0000-000000000000</id>
+                    <parentGroupId>3c13ef0d-de03-3c93-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>743.5182081062903</x>
+                        <y>510.23884295502836</y>
+                    </position>
+                    <height>36.437252044677734</height>
+                    <label>Results of execution of Procedure API</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>14px</value>
+                        </entry>
+                    </style>
+                    <width>293.0831604003906</width>
+                </labels>
+                <labels>
+                    <id>b7b3eb03-0bdd-32f0-0000-000000000000</id>
+                    <parentGroupId>3c13ef0d-de03-3c93-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>140.0000348885169</x>
+                        <y>-171.9999990554697</y>
+                    </position>
+                    <height>48.0</height>
+                    <label>Integration with Oracle E-Business Suite</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>18px</value>
+                        </entry>
+                    </style>
+                    <width>361.0</width>
+                </labels>
+                <labels>
+                    <id>bc518e07-97e5-314c-0000-000000000000</id>
+                    <parentGroupId>3c13ef0d-de03-3c93-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1324.744709571134</x>
+                        <y>510.5464601425283</y>
+                    </position>
+                    <height>58.22275161743164</height>
+                    <label>If there is a failure such as wrong input 
+data type for ingested procedure api
+parameters, network errors etc.</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>14px</value>
+                        </entry>
+                    </style>
+                    <width>288.8768005371094</width>
+                </labels>
+                <labels>
+                    <id>e5ab76ee-90af-3c62-0000-000000000000</id>
+                    <parentGroupId>3c13ef0d-de03-3c93-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1316.6396375496497</x>
+                        <y>-84.97569752653902</y>
+                    </position>
+                    <height>262.5667724609375</height>
+                    <label>ExecutePLSQL for execution of Procedure API
+Steps:
+1. Setup Oracle E-Business Suite connection by configuring
+controller service
+2. Configure Database Schema User
+3. Click on 'Advanced button' ( botton-left of the properties tab) to
+browse, select and retrieve metadata information of an selected 
+procedure api. If the procedure includes PLSQL Record type then its a
+wrapper procedure which requires additional configuration such as 
+user and password for creating new wrapper procedure api. (Read the
+documentation for more details ) - https://github.build.ge.com/Thread-Connect/tc-ebiz-bundle (under Oracle Adapter Documentation.docx)
+4. After storing Metadata API, you are now ready to run the processor with
+incoming parameter values api flowfile
+Note : Always connect 'retry' relationship to self loop cause when there
+is a failure the task is retried for configured number of attempts</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>14px</value>
+                        </entry>
+                    </style>
+                    <width>944.1802368164062</width>
+                </labels>
+                <labels>
+                    <id>3135326b-96db-3fee-0000-000000000000</id>
+                    <parentGroupId>3c13ef0d-de03-3c93-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>135.00005014730596</x>
+                        <y>-31.999999055469686</y>
+                    </position>
+                    <height>62.73684310913086</height>
+                    <label>Procedure API parameter values which is 
+passed to ExecutePLQL for execution of 
+procedure api</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>14px</value>
+                        </entry>
+                    </style>
+                    <width>297.28961181640625</width>
+                </labels>
+                <processors>
+                    <id>95723e7f-4e11-30bd-0000-000000000000</id>
+                    <parentGroupId>3c13ef0d-de03-3c93-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>135.00001962972783</x>
+                        <y>51.00000094453031</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>File Size</key>
+<value>
+    <name>File Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Batch Size</key>
+<value>
+    <name>Batch Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Data Format</key>
+<value>
+    <name>Data Format</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Unique FlowFiles</key>
+<value>
+    <name>Unique FlowFiles</name>
+</value>
+                            </entry>
+                            <entry>
+<key>generate-ff-custom-text</key>
+<value>
+    <name>generate-ff-custom-text</name>
+</value>
+                            </entry>
+                            <entry>
+<key>character-set</key>
+<value>
+    <name>character-set</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>File Size</key>
+<value>0B</value>
+                            </entry>
+                            <entry>
+<key>Batch Size</key>
+<value>1</value>
+                            </entry>
+                            <entry>
+<key>Data Format</key>
+<value>Text</value>
+                            </entry>
+                            <entry>
+<key>Unique FlowFiles</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>generate-ff-custom-text</key>
+                            </entry>
+                            <entry>
+<key>character-set</key>
+<value>UTF-8</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>GenerateFlowFile</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
+                </processors>
+                <processors>
+                    <id>1e67102f-8952-3117-0000-000000000000</id>
+                    <parentGroupId>3c13ef0d-de03-3c93-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>743.0000196297278</x>
+                        <y>46.00000094453031</y>
+                    </position>
+                    <bundle>
+                        <artifact>tc-plsql-nar</artifact>
+                        <group>ge.digital.tc</group>
+                        <version>2.0.0-SNAPSHOT</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Database Connection Pooling Service</key>
+<value>
+    <identifiesControllerService>ge.digital.tc.oracleservice.OracleService</identifiesControllerService>
+    <name>Database Connection Pooling Service</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Database Schema</key>
+<value>
+    <name>Database Schema</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Request Profile Format</key>
+<value>
+    <name>Request Profile Format</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Procedure</key>
+<value>
+    <name>Procedure</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Query Timeout</key>
+<value>
+    <name>Query Timeout</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Retry Count</key>
+<value>
+    <name>Retry Count</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Wrapper Procedure</key>
+<value>
+    <name>Wrapper Procedure</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Metadata Schema</key>
+<value>
+    <name>Metadata Schema</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Database Connection Pooling Service</key>
+<value>f2441997-4530-328f-0000-000000000000</value>
+                            </entry>
+                            <entry>
+<key>Database Schema</key>
+<value>your_database_schema</value>
+                            </entry>
+                            <entry>
+<key>Request Profile Format</key>
+<value>XML</value>
+                            </entry>
+                            <entry>
+<key>Procedure</key>
+<value>procedure_name- to be fetched from 'Advanced' button</value>
+                            </entry>
+                            <entry>
+<key>Query Timeout</key>
+<value>0</value>
+                            </entry>
+                            <entry>
+<key>Retry Count</key>
+<value>3</value>
+                            </entry>
+                            <entry>
+<key>Wrapper Procedure</key>
+<value>If the procedure contains fields such as 'PLSQL RECORD' type  </value>
+                            </entry>
+                            <entry>
+<key>Metadata Schema</key>
+<value>This field automatically gets stored when 
+you browse and select schema to retrieved 
+from 'Advanced button'</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>ExecutePLSQL</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>Failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>Original</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>Retry</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>Success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>ge.digital.tc.processors.plsql.ExecutePLSQL</type>
+                </processors>
+                <processors>
+                    <id>33c69f11-be13-3d06-0000-000000000000</id>
+                    <parentGroupId>3c13ef0d-de03-3c93-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>744.0000196297278</x>
+                        <y>340.0000009445303</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Directory</key>
+<value>
+    <name>Directory</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Conflict Resolution Strategy</key>
+<value>
+    <name>Conflict Resolution Strategy</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Create Missing Directories</key>
+<value>
+    <name>Create Missing Directories</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Maximum File Count</key>
+<value>
+    <name>Maximum File Count</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Last Modified Time</key>
+<value>
+    <name>Last Modified Time</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Permissions</key>
+<value>
+    <name>Permissions</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Owner</key>
+<value>
+    <name>Owner</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Group</key>
+<value>
+    <name>Group</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Directory</key>
+                            </entry>
+                            <entry>
+<key>Conflict Resolution Strategy</key>
+<value>fail</value>
+                            </entry>
+                            <entry>
+<key>Create Missing Directories</key>
+<value>true</value>
+                            </entry>
+                            <entry>
+<key>Maximum File Count</key>
+                            </entry>
+                            <entry>
+<key>Last Modified Time</key>
+                            </entry>
+                            <entry>
+<key>Permissions</key>
+                            </entry>
+                            <entry>
+<key>Owner</key>
+                            </entry>
+                            <entry>
+<key>Group</key>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>PutFile</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.PutFile</type>
+                </processors>
+                <processors>
+                    <id>61f4be6b-02c9-3604-0000-000000000000</id>
+                    <parentGroupId>3c13ef0d-de03-3c93-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1320.0000196297278</x>
+                        <y>339.0000009445303</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Directory</key>
+<value>
+    <name>Directory</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Conflict Resolution Strategy</key>
+<value>
+    <name>Conflict Resolution Strategy</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Create Missing Directories</key>
+<value>
+    <name>Create Missing Directories</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Maximum File Count</key>
+<value>
+    <name>Maximum File Count</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Last Modified Time</key>
+<value>
+    <name>Last Modified Time</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Permissions</key>
+<value>
+    <name>Permissions</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Owner</key>
+<value>
+    <name>Owner</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Group</key>
+<value>
+    <name>Group</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Directory</key>
+                            </entry>
+                            <entry>
+<key>Conflict Resolution Strategy</key>
+<value>fail</value>
+                            </entry>
+                            <entry>
+<key>Create Missing Directories</key>
+<value>true</value>
+                            </entry>
+                            <entry>
+<key>Maximum File Count</key>
+                            </entry>
+                            <entry>
+<key>Last Modified Time</key>
+                            </entry>
+                            <entry>
+<key>Permissions</key>
+                            </entry>
+                            <entry>
+<key>Owner</key>
+                            </entry>
+                            <entry>
+<key>Group</key>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>PutFile</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.PutFile</type>
+                </processors>
+            </contents>
+            <name>Oracle E-Business Suite</name>
+            <variables/>
+        </processGroups>
+    </snippet>
+    <timestamp>09/04/2018 11:55:03 IST</timestamp>
+</template>

@@ -1,0 +1,943 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template encoding-version="1.2">
+    <description></description>
+    <groupId>4823e308-0165-1000-ffff-ffff99582f47</groupId>
+    <name>ReadSFTPtoPostgres</name>
+    <snippet>
+        <connections>
+            <id>801df893-89d2-3f1e-0000-000000000000</id>
+            <parentGroupId>34535ee9-5b9e-3d29-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <bends>
+                <x>944.5441698302488</x>
+                <y>930.8797683010226</y>
+            </bends>
+            <bends>
+                <x>944.5441698302488</x>
+                <y>980.8797683010226</y>
+            </bends>
+            <destination>
+                <groupId>34535ee9-5b9e-3d29-0000-000000000000</groupId>
+                <id>db719bc3-593e-37a7-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <name></name>
+            <selectedRelationships>retry</selectedRelationships>
+            <source>
+                <groupId>34535ee9-5b9e-3d29-0000-000000000000</groupId>
+                <id>db719bc3-593e-37a7-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>8f09cb5f-2282-3b85-0000-000000000000</id>
+            <parentGroupId>34535ee9-5b9e-3d29-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>34535ee9-5b9e-3d29-0000-000000000000</groupId>
+                <id>5a230d6d-b662-364d-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <name></name>
+            <selectedRelationships>success</selectedRelationships>
+            <source>
+                <groupId>34535ee9-5b9e-3d29-0000-000000000000</groupId>
+                <id>75a93e5b-016f-3834-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>acade4a1-662a-3b88-0000-000000000000</id>
+            <parentGroupId>34535ee9-5b9e-3d29-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>fe5159c9-01f3-3120-0000-000000000000</groupId>
+                <id>794286bd-f7fa-305e-0000-000000000000</id>
+                <type>INPUT_PORT</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <name></name>
+            <selectedRelationships>comms.failure</selectedRelationships>
+            <source>
+                <groupId>34535ee9-5b9e-3d29-0000-000000000000</groupId>
+                <id>5a230d6d-b662-364d-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>f5f84bd0-334c-3bc4-0000-000000000000</id>
+            <parentGroupId>34535ee9-5b9e-3d29-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>82caf05d-786a-3623-0000-000000000000</groupId>
+                <id>6ad1423b-9d12-3103-0000-000000000000</id>
+                <type>INPUT_PORT</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <name></name>
+            <selectedRelationships>success</selectedRelationships>
+            <source>
+                <groupId>34535ee9-5b9e-3d29-0000-000000000000</groupId>
+                <id>db719bc3-593e-37a7-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>06d9219e-f259-3512-0000-000000000000</id>
+            <parentGroupId>34535ee9-5b9e-3d29-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>a549f26d-cdaa-33bf-0000-000000000000</groupId>
+                <id>231ca7cf-4806-38f8-0000-000000000000</id>
+                <type>INPUT_PORT</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <name></name>
+            <selectedRelationships>failure</selectedRelationships>
+            <source>
+                <groupId>34535ee9-5b9e-3d29-0000-000000000000</groupId>
+                <id>db719bc3-593e-37a7-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>48ac4032-8630-3339-0000-000000000000</id>
+            <parentGroupId>34535ee9-5b9e-3d29-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <destination>
+                <groupId>34535ee9-5b9e-3d29-0000-000000000000</groupId>
+                <id>db719bc3-593e-37a7-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>1</labelIndex>
+            <name></name>
+            <source>
+                <groupId>fe5159c9-01f3-3120-0000-000000000000</groupId>
+                <id>0d293f70-0958-36ca-0000-000000000000</id>
+                <type>OUTPUT_PORT</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <connections>
+            <id>666c8b93-1232-3cdb-0000-000000000000</id>
+            <parentGroupId>34535ee9-5b9e-3d29-0000-000000000000</parentGroupId>
+            <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+            <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+            <bends>
+                <x>825.2197748153244</x>
+                <y>591.6491595915655</y>
+            </bends>
+            <destination>
+                <groupId>34535ee9-5b9e-3d29-0000-000000000000</groupId>
+                <id>db719bc3-593e-37a7-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </destination>
+            <flowFileExpiration>0 sec</flowFileExpiration>
+            <labelIndex>0</labelIndex>
+            <name></name>
+            <selectedRelationships>success</selectedRelationships>
+            <source>
+                <groupId>34535ee9-5b9e-3d29-0000-000000000000</groupId>
+                <id>5a230d6d-b662-364d-0000-000000000000</id>
+                <type>PROCESSOR</type>
+            </source>
+            <zIndex>0</zIndex>
+        </connections>
+        <labels>
+            <id>b824ef2c-efa9-37f0-0000-000000000000</id>
+            <parentGroupId>34535ee9-5b9e-3d29-0000-000000000000</parentGroupId>
+            <position>
+                <x>289.22053497560955</x>
+                <y>276.35242275747225</y>
+            </position>
+            <height>68.30992889404297</height>
+            <label>- Pulls content from the 
+  file on remote server
+  and writes it to content 
+  of the incoming FlowFile</label>
+            <style>
+                <entry>
+                    <key>font-size</key>
+                    <value>12px</value>
+                </entry>
+            </style>
+            <width>155.39846801757812</width>
+        </labels>
+        <labels>
+            <id>e8ee5732-563e-35e6-0000-000000000000</id>
+            <parentGroupId>34535ee9-5b9e-3d29-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.0</x>
+                <y>898.8750182536311</y>
+            </position>
+            <height>113.31600189208984</height>
+            <label>- Controller Services created
+  - CSVReader: parses formatted data
+  - AvroSchemaRegistry: interprets
+    temperature_table in database
+  - PostgresqCon: connects to 
+    Postgres database
+      - utilizes GE Enterprise Connect (EC) </label>
+            <style>
+                <entry>
+                    <key>font-size</key>
+                    <value>12px</value>
+                </entry>
+            </style>
+            <width>241.201416015625</width>
+        </labels>
+        <labels>
+            <id>f573d6c2-8e5d-38cf-0000-000000000000</id>
+            <parentGroupId>34535ee9-5b9e-3d29-0000-000000000000</parentGroupId>
+            <position>
+                <x>270.5211636377189</x>
+                <y>899.723814053859</y>
+            </position>
+            <height>107.61091613769531</height>
+            <label>- Inputs records from incoming 
+  flow files
+- Uses INSERT Statement Type 
+  into temperature_table
+  in database
+- Translates records to SQL for 
+  execution</label>
+            <style>
+                <entry>
+                    <key>font-size</key>
+                    <value>12px</value>
+                </entry>
+            </style>
+            <width>189.21841430664062</width>
+        </labels>
+        <labels>
+            <id>77e97588-e5d4-326d-0000-000000000000</id>
+            <parentGroupId>34535ee9-5b9e-3d29-0000-000000000000</parentGroupId>
+            <position>
+                <x>288.56359833010174</x>
+                <y>25.59966091665183</y>
+            </position>
+            <height>94.30498504638672</height>
+            <label>- Pulls list of files from 
+  specified SFTP Server 
+- Creates flow file for 
+  each file on remote 
+  server (gets sent 
+  to FetchSFTP)</label>
+            <style>
+                <entry>
+                    <key>font-size</key>
+                    <value>12px</value>
+                </entry>
+            </style>
+            <width>135.5411376953125</width>
+        </labels>
+        <processGroups>
+            <id>82caf05d-786a-3623-0000-000000000000</id>
+            <parentGroupId>34535ee9-5b9e-3d29-0000-000000000000</parentGroupId>
+            <position>
+                <x>748.8992542646215</x>
+                <y>1183.8411458149835</y>
+            </position>
+            <comments></comments>
+            <contents>
+                <inputPorts>
+                    <id>6ad1423b-9d12-3103-0000-000000000000</id>
+                    <parentGroupId>82caf05d-786a-3623-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>384.9999344416208</x>
+                        <y>69.99999598015984</y>
+                    </position>
+                    <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                    <name>From Success Queue</name>
+                    <state>STOPPED</state>
+                    <type>INPUT_PORT</type>
+                    <validationErrors>'Port 'From Success Queue'' is invalid because Output connection for port 'From Success Queue' is not defined.</validationErrors>
+                </inputPorts>
+            </contents>
+            <name>Continue Flow</name>
+            <variables/>
+        </processGroups>
+        <processGroups>
+            <id>a549f26d-cdaa-33bf-0000-000000000000</id>
+            <parentGroupId>34535ee9-5b9e-3d29-0000-000000000000</parentGroupId>
+            <position>
+                <x>156.08743195228317</x>
+                <y>1183.5081124004523</y>
+            </position>
+            <comments></comments>
+            <contents>
+                <inputPorts>
+                    <id>231ca7cf-4806-38f8-0000-000000000000</id>
+                    <parentGroupId>a549f26d-cdaa-33bf-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>581.9999947171655</x>
+                        <y>250.99999977144773</y>
+                    </position>
+                    <comments></comments>
+                    <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                    <name>From Fail Queue</name>
+                    <state>STOPPED</state>
+                    <type>INPUT_PORT</type>
+                    <validationErrors>'Port 'From Fail Queue'' is invalid because Output connection for port 'From Fail Queue' is not defined.</validationErrors>
+                </inputPorts>
+            </contents>
+            <name>Handle Failure</name>
+            <variables/>
+        </processGroups>
+        <processGroups>
+            <id>fe5159c9-01f3-3120-0000-000000000000</id>
+            <parentGroupId>34535ee9-5b9e-3d29-0000-000000000000</parentGroupId>
+            <position>
+                <x>242.43398956947067</x>
+                <y>514.700922459046</y>
+            </position>
+            <comments></comments>
+            <contents>
+                <inputPorts>
+                    <id>794286bd-f7fa-305e-0000-000000000000</id>
+                    <parentGroupId>fe5159c9-01f3-3120-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>581.9999947171655</x>
+                        <y>250.99999977144773</y>
+                    </position>
+                    <comments></comments>
+                    <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                    <name>Incoming Fail Queue</name>
+                    <state>STOPPED</state>
+                    <type>INPUT_PORT</type>
+                    <validationErrors>'Port 'Incoming Fail Queue'' is invalid because Output connection for port 'Incoming Fail Queue' is not defined.</validationErrors>
+                </inputPorts>
+                <outputPorts>
+                    <id>0d293f70-0958-36ca-0000-000000000000</id>
+                    <parentGroupId>fe5159c9-01f3-3120-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>584.3832619818426</x>
+                        <y>481.263935654254</y>
+                    </position>
+                    <comments></comments>
+                    <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                    <name>Fixed Failures</name>
+                    <state>STOPPED</state>
+                    <type>OUTPUT_PORT</type>
+                </outputPorts>
+            </contents>
+            <name>Handle Failure</name>
+            <variables/>
+        </processGroups>
+        <processors>
+            <id>db719bc3-593e-37a7-0000-000000000000</id>
+            <parentGroupId>34535ee9-5b9e-3d29-0000-000000000000</parentGroupId>
+            <position>
+                <x>489.54416983024885</x>
+                <y>890.8797683010226</y>
+            </position>
+            <bundle>
+                <artifact>nifi-standard-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.5.0</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>put-db-record-record-reader</key>
+                        <value>
+                            <identifiesControllerService>org.apache.nifi.serialization.RecordReaderFactory</identifiesControllerService>
+                            <name>put-db-record-record-reader</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-statement-type</key>
+                        <value>
+                            <name>put-db-record-statement-type</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-dcbp-service</key>
+                        <value>
+                            <identifiesControllerService>org.apache.nifi.dbcp.DBCPService</identifiesControllerService>
+                            <name>put-db-record-dcbp-service</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-catalog-name</key>
+                        <value>
+                            <name>put-db-record-catalog-name</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-schema-name</key>
+                        <value>
+                            <name>put-db-record-schema-name</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-table-name</key>
+                        <value>
+                            <name>put-db-record-table-name</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-translate-field-names</key>
+                        <value>
+                            <name>put-db-record-translate-field-names</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-unmatched-field-behavior</key>
+                        <value>
+                            <name>put-db-record-unmatched-field-behavior</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-unmatched-column-behavior</key>
+                        <value>
+                            <name>put-db-record-unmatched-column-behavior</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-update-keys</key>
+                        <value>
+                            <name>put-db-record-update-keys</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-field-containing-sql</key>
+                        <value>
+                            <name>put-db-record-field-containing-sql</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-quoted-identifiers</key>
+                        <value>
+                            <name>put-db-record-quoted-identifiers</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-quoted-table-identifiers</key>
+                        <value>
+                            <name>put-db-record-quoted-table-identifiers</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-query-timeout</key>
+                        <value>
+                            <name>put-db-record-query-timeout</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>rollback-on-failure</key>
+                        <value>
+                            <name>rollback-on-failure</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>put-db-record-record-reader</key>
+                        <value>3265a1af-4d8d-355a-0000-000000000000</value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-statement-type</key>
+                        <value>INSERT</value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-dcbp-service</key>
+                        <value>2b8c80a7-82e8-3740-0000-000000000000</value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-catalog-name</key>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-schema-name</key>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-table-name</key>
+                        <value>temperature_table</value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-translate-field-names</key>
+                        <value>false</value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-unmatched-field-behavior</key>
+                        <value>Ignore Unmatched Fields</value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-unmatched-column-behavior</key>
+                        <value>Warn on Unmatched Columns</value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-update-keys</key>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-field-containing-sql</key>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-quoted-identifiers</key>
+                        <value>true</value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-quoted-table-identifiers</key>
+                        <value>true</value>
+                    </entry>
+                    <entry>
+                        <key>put-db-record-query-timeout</key>
+                        <value>0 seconds</value>
+                    </entry>
+                    <entry>
+                        <key>rollback-on-failure</key>
+                        <value>false</value>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <name>PutDatabaseRecord</name>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>failure</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>retry</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>success</name>
+            </relationships>
+            <state>STOPPED</state>
+            <style/>
+            <type>org.apache.nifi.processors.standard.PutDatabaseRecord</type>
+        </processors>
+        <processors>
+            <id>5a230d6d-b662-364d-0000-000000000000</id>
+            <parentGroupId>34535ee9-5b9e-3d29-0000-000000000000</parentGroupId>
+            <position>
+                <x>473.9564537139654</x>
+                <y>239.78282928466797</y>
+            </position>
+            <bundle>
+                <artifact>nifi-standard-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.5.0</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>Hostname</key>
+                        <value>
+                            <name>Hostname</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Port</key>
+                        <value>
+                            <name>Port</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Username</key>
+                        <value>
+                            <name>Username</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Password</key>
+                        <value>
+                            <name>Password</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Private Key Path</key>
+                        <value>
+                            <name>Private Key Path</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Private Key Passphrase</key>
+                        <value>
+                            <name>Private Key Passphrase</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Remote File</key>
+                        <value>
+                            <name>Remote File</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Completion Strategy</key>
+                        <value>
+                            <name>Completion Strategy</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Move Destination Directory</key>
+                        <value>
+                            <name>Move Destination Directory</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Connection Timeout</key>
+                        <value>
+                            <name>Connection Timeout</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Data Timeout</key>
+                        <value>
+                            <name>Data Timeout</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Send Keep Alive On Timeout</key>
+                        <value>
+                            <name>Send Keep Alive On Timeout</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Host Key File</key>
+                        <value>
+                            <name>Host Key File</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Strict Host Key Checking</key>
+                        <value>
+                            <name>Strict Host Key Checking</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Use Compression</key>
+                        <value>
+                            <name>Use Compression</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>Hostname</key>
+                    </entry>
+                    <entry>
+                        <key>Port</key>
+                        <value>22</value>
+                    </entry>
+                    <entry>
+                        <key>Username</key>
+                    </entry>
+                    <entry>
+                        <key>Password</key>
+                    </entry>
+                    <entry>
+                        <key>Private Key Path</key>
+                    </entry>
+                    <entry>
+                        <key>Private Key Passphrase</key>
+                    </entry>
+                    <entry>
+                        <key>Remote File</key>
+                    </entry>
+                    <entry>
+                        <key>Completion Strategy</key>
+                        <value>None</value>
+                    </entry>
+                    <entry>
+                        <key>Move Destination Directory</key>
+                    </entry>
+                    <entry>
+                        <key>Connection Timeout</key>
+                        <value>30 sec</value>
+                    </entry>
+                    <entry>
+                        <key>Data Timeout</key>
+                        <value>30 sec</value>
+                    </entry>
+                    <entry>
+                        <key>Send Keep Alive On Timeout</key>
+                        <value>true</value>
+                    </entry>
+                    <entry>
+                        <key>Host Key File</key>
+                    </entry>
+                    <entry>
+                        <key>Strict Host Key Checking</key>
+                        <value>false</value>
+                    </entry>
+                    <entry>
+                        <key>Use Compression</key>
+                        <value>false</value>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <name>FetchSFTP</name>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>comms.failure</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>not.found</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>permission.denied</name>
+            </relationships>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>success</name>
+            </relationships>
+            <state>STOPPED</state>
+            <style/>
+            <type>org.apache.nifi.processors.standard.FetchSFTP</type>
+        </processors>
+        <processors>
+            <id>75a93e5b-016f-3834-0000-000000000000</id>
+            <parentGroupId>34535ee9-5b9e-3d29-0000-000000000000</parentGroupId>
+            <position>
+                <x>471.6044029327154</x>
+                <y>0.0</y>
+            </position>
+            <bundle>
+                <artifact>nifi-standard-nar</artifact>
+                <group>org.apache.nifi</group>
+                <version>1.5.0</version>
+            </bundle>
+            <config>
+                <bulletinLevel>WARN</bulletinLevel>
+                <comments></comments>
+                <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                <descriptors>
+                    <entry>
+                        <key>Hostname</key>
+                        <value>
+                            <name>Hostname</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Port</key>
+                        <value>
+                            <name>Port</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Username</key>
+                        <value>
+                            <name>Username</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Password</key>
+                        <value>
+                            <name>Password</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Private Key Path</key>
+                        <value>
+                            <name>Private Key Path</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Private Key Passphrase</key>
+                        <value>
+                            <name>Private Key Passphrase</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Remote Path</key>
+                        <value>
+                            <name>Remote Path</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Distributed Cache Service</key>
+                        <value>
+                            <identifiesControllerService>org.apache.nifi.distributed.cache.client.DistributedMapCacheClient</identifiesControllerService>
+                            <name>Distributed Cache Service</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Search Recursively</key>
+                        <value>
+                            <name>Search Recursively</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>File Filter Regex</key>
+                        <value>
+                            <name>File Filter Regex</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Path Filter Regex</key>
+                        <value>
+                            <name>Path Filter Regex</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Ignore Dotted Files</key>
+                        <value>
+                            <name>Ignore Dotted Files</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Strict Host Key Checking</key>
+                        <value>
+                            <name>Strict Host Key Checking</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Host Key File</key>
+                        <value>
+                            <name>Host Key File</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Connection Timeout</key>
+                        <value>
+                            <name>Connection Timeout</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Data Timeout</key>
+                        <value>
+                            <name>Data Timeout</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>Send Keep Alive On Timeout</key>
+                        <value>
+                            <name>Send Keep Alive On Timeout</name>
+                        </value>
+                    </entry>
+                    <entry>
+                        <key>target-system-timestamp-precision</key>
+                        <value>
+                            <name>target-system-timestamp-precision</name>
+                        </value>
+                    </entry>
+                </descriptors>
+                <executionNode>ALL</executionNode>
+                <lossTolerant>false</lossTolerant>
+                <penaltyDuration>30 sec</penaltyDuration>
+                <properties>
+                    <entry>
+                        <key>Hostname</key>
+                        <value>XXXXXXX</value>
+                    </entry>
+                    <entry>
+                        <key>Port</key>
+                        <value>22</value>
+                    </entry>
+                    <entry>
+                        <key>Username</key>
+                        <value>XXXXXXX</value>
+                    </entry>
+                    <entry>
+                        <key>Password</key>
+                    </entry>
+                    <entry>
+                        <key>Private Key Path</key>
+                    </entry>
+                    <entry>
+                        <key>Private Key Passphrase</key>
+                    </entry>
+                    <entry>
+                        <key>Remote Path</key>
+                        <value>.</value>
+                    </entry>
+                    <entry>
+                        <key>Distributed Cache Service</key>
+                    </entry>
+                    <entry>
+                        <key>Search Recursively</key>
+                        <value>false</value>
+                    </entry>
+                    <entry>
+                        <key>File Filter Regex</key>
+                    </entry>
+                    <entry>
+                        <key>Path Filter Regex</key>
+                    </entry>
+                    <entry>
+                        <key>Ignore Dotted Files</key>
+                        <value>true</value>
+                    </entry>
+                    <entry>
+                        <key>Strict Host Key Checking</key>
+                        <value>false</value>
+                    </entry>
+                    <entry>
+                        <key>Host Key File</key>
+                    </entry>
+                    <entry>
+                        <key>Connection Timeout</key>
+                        <value>30 sec</value>
+                    </entry>
+                    <entry>
+                        <key>Data Timeout</key>
+                        <value>30 sec</value>
+                    </entry>
+                    <entry>
+                        <key>Send Keep Alive On Timeout</key>
+                        <value>true</value>
+                    </entry>
+                    <entry>
+                        <key>target-system-timestamp-precision</key>
+                        <value>auto-detect</value>
+                    </entry>
+                </properties>
+                <runDurationMillis>0</runDurationMillis>
+                <schedulingPeriod>0 sec</schedulingPeriod>
+                <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                <yieldDuration>1 sec</yieldDuration>
+            </config>
+            <name>ListSFTP</name>
+            <relationships>
+                <autoTerminate>false</autoTerminate>
+                <name>success</name>
+            </relationships>
+            <state>STOPPED</state>
+            <style/>
+            <type>org.apache.nifi.processors.standard.ListSFTP</type>
+        </processors>
+    </snippet>
+    <timestamp>08/20/2018 20:19:42 UTC</timestamp>
+</template>

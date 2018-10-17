@@ -1,0 +1,835 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template encoding-version="1.2">
+    <description>A basic flow to add a message to some Azure EventHub</description>
+    <groupId>fdcd7fbf-0162-1000-645d-4ada98b27eb6</groupId>
+    <name>Azure-EventHub</name>
+    <snippet>
+        <labels>
+            <id>541e9dea-8a60-3d86-0000-000000000000</id>
+            <parentGroupId>94e8c55b-8cc6-3383-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.0</x>
+                <y>0.0</y>
+            </position>
+            <height>190.01271057128906</height>
+            <label>Azure-EventHub</label>
+            <style>
+                <entry>
+                    <key>font-size</key>
+                    <value>18px</value>
+                </entry>
+            </style>
+            <width>563.7044067382812</width>
+        </labels>
+        <processGroups>
+            <id>3926a2ea-b2ac-354a-0000-000000000000</id>
+            <parentGroupId>94e8c55b-8cc6-3383-0000-000000000000</parentGroupId>
+            <position>
+                <x>169.4280810957772</x>
+                <y>7.917208223217926</y>
+            </position>
+            <comments></comments>
+            <contents>
+                <connections>
+                    <id>859c5c06-a16c-3bc4-0000-000000000000</id>
+                    <parentGroupId>3926a2ea-b2ac-354a-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>3926a2ea-b2ac-354a-0000-000000000000</groupId>
+                        <id>d7d3e76a-5a73-31e7-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>3926a2ea-b2ac-354a-0000-000000000000</groupId>
+                        <id>3740224b-b9ad-3d0e-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>9e6e3ccb-4944-3dc8-0000-000000000000</id>
+                    <parentGroupId>3926a2ea-b2ac-354a-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>3926a2ea-b2ac-354a-0000-000000000000</groupId>
+                        <id>3bdd642d-1bea-3c2d-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>3926a2ea-b2ac-354a-0000-000000000000</groupId>
+                        <id>7c3459ef-8f11-36af-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>e85def2a-1e55-3931-0000-000000000000</id>
+                    <parentGroupId>3926a2ea-b2ac-354a-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>3926a2ea-b2ac-354a-0000-000000000000</groupId>
+                        <id>d7d3e76a-5a73-31e7-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>3926a2ea-b2ac-354a-0000-000000000000</groupId>
+                        <id>ebc5b29c-dcfd-3463-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>ebba73fe-3fa5-3146-0000-000000000000</id>
+                    <parentGroupId>3926a2ea-b2ac-354a-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>3926a2ea-b2ac-354a-0000-000000000000</groupId>
+                        <id>ebc5b29c-dcfd-3463-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>0</labelIndex>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>3926a2ea-b2ac-354a-0000-000000000000</groupId>
+                        <id>3bdd642d-1bea-3c2d-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>43b60e27-503f-30ad-0000-000000000000</id>
+                    <parentGroupId>3926a2ea-b2ac-354a-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>3926a2ea-b2ac-354a-0000-000000000000</groupId>
+                        <id>3740224b-b9ad-3d0e-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>0</labelIndex>
+                    <name></name>
+                    <selectedRelationships>failure</selectedRelationships>
+                    <source>
+                        <groupId>3926a2ea-b2ac-354a-0000-000000000000</groupId>
+                        <id>3bdd642d-1bea-3c2d-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <controllerServices>
+                    <id>49f1722b-6018-31e8-0000-000000000000</id>
+                    <parentGroupId>3926a2ea-b2ac-354a-0000-000000000000</parentGroupId>
+                    <bundle>
+                        <artifact>nifi-http-context-map-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0</version>
+                    </bundle>
+                    <descriptors>
+                        <entry>
+                            <key>Maximum Outstanding Requests</key>
+                            <value>
+<name>Maximum Outstanding Requests</name>
+                            </value>
+                        </entry>
+                        <entry>
+                            <key>Request Expiration</key>
+                            <value>
+<name>Request Expiration</name>
+                            </value>
+                        </entry>
+                    </descriptors>
+                    <name>Azure-EH_StandardHttpContextMap</name>
+                    <persistsState>false</persistsState>
+                    <properties>
+                        <entry>
+                            <key>Maximum Outstanding Requests</key>
+                        </entry>
+                        <entry>
+                            <key>Request Expiration</key>
+                        </entry>
+                    </properties>
+                    <state>ENABLED</state>
+                    <type>org.apache.nifi.http.StandardHttpContextMap</type>
+                </controllerServices>
+                <labels>
+                    <id>919fe567-f7a9-3306-0000-000000000000</id>
+                    <parentGroupId>3926a2ea-b2ac-354a-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>862.2848661837124</x>
+                        <y>972.7196335694343</y>
+                    </position>
+                    <height>149.8400421142578</height>
+                    <label>Let caller know whether
+PUT failed or succeeded</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>16px</value>
+                        </entry>
+                    </style>
+                    <width>1028.6641845703125</width>
+                </labels>
+                <labels>
+                    <id>b39ffdfe-8a0f-3f48-0000-000000000000</id>
+                    <parentGroupId>3926a2ea-b2ac-354a-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1185.9439200935576</x>
+                        <y>121.43489878070477</y>
+                    </position>
+                    <height>251.19534301757812</height>
+                    <label>This flow is setup as an API.
+-
+There may be some prior setup needed
+for this flow to work as designed.
+-
+Right-click on the grid and select Start
+to start the flow.
+-
+Once the flow has been started, send a 
+request to http://&lt;host&gt;:3119/nifi to put 
+a message onto the Azure EventHub
+configured in the PutAzureEventHub processor</label>
+                    <style>
+                        <entry>
+                            <key>background-color</key>
+                            <value>#d6ffed</value>
+                        </entry>
+                        <entry>
+                            <key>font-size</key>
+                            <value>16px</value>
+                        </entry>
+                    </style>
+                    <width>391.7485656738281</width>
+                </labels>
+                <labels>
+                    <id>d7ed2b40-a001-3c29-0000-000000000000</id>
+                    <parentGroupId>3926a2ea-b2ac-354a-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>994.5948157877278</x>
+                        <y>1162.6911749074777</y>
+                    </position>
+                    <height>147.07815551757812</height>
+                    <label>This processor returns a response to 
+the caller of the API</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>14px</value>
+                        </entry>
+                    </style>
+                    <width>656.1950073242188</width>
+                </labels>
+                <labels>
+                    <id>f0e4b5bd-abad-3adf-0000-000000000000</id>
+                    <parentGroupId>3926a2ea-b2ac-354a-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1013.8923448617306</x>
+                        <y>383.72331615504237</y>
+                    </position>
+                    <height>329.4102783203125</height>
+                    <label>This processor listens to set port 3119
+for incoming requests
+-
+To change the listening port, follow below
+steps:
+1. Right-click the processor
+2. Select Stop
+3. Right-click the processor
+4. Select Configure
+--&gt;a. A box covering much of the canvas
+--&gt; thereby removing these instructions
+--&gt; from view will appear
+5. Go to Properties Tab
+6. Click on first row
+--&gt; a. First row is labeled 'Listening Port'
+7. Enter a different number
+8. Click OK on the little box
+9. Click Apply on the larger box
+10. You should now be back at the canvas</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>14px</value>
+                        </entry>
+                    </style>
+                    <width>663.5773315429688</width>
+                </labels>
+                <labels>
+                    <id>5214ee94-02d0-318e-0000-000000000000</id>
+                    <parentGroupId>3926a2ea-b2ac-354a-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1015.0814859875893</x>
+                        <y>758.3235947218378</y>
+                    </position>
+                    <height>143.89393615722656</height>
+                    <label>This processor contains the configurations 
+which allow a connection to some 
+pre-identified Azure EventHub instance
+to occur</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>14px</value>
+                        </entry>
+                    </style>
+                    <width>660.0098266601562</width>
+                </labels>
+                <processors>
+                    <id>d7d3e76a-5a73-31e7-0000-000000000000</id>
+                    <parentGroupId>3926a2ea-b2ac-354a-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1296.810796498687</x>
+                        <y>1171.6897428260836</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>HTTP Status Code</key>
+<value>
+    <name>HTTP Status Code</name>
+</value>
+                            </entry>
+                            <entry>
+<key>HTTP Context Map</key>
+<value>
+    <identifiesControllerService>org.apache.nifi.http.HttpContextMap</identifiesControllerService>
+    <name>HTTP Context Map</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>HTTP Status Code</key>
+<value>200</value>
+                            </entry>
+                            <entry>
+<key>HTTP Context Map</key>
+<value>49f1722b-6018-31e8-0000-000000000000</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>HandleHttpResponse</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.HandleHttpResponse</type>
+                </processors>
+                <processors>
+                    <id>ebc5b29c-dcfd-3463-0000-000000000000</id>
+                    <parentGroupId>3926a2ea-b2ac-354a-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1530.6192870616803</x>
+                        <y>981.044091413057</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Regular Expression</key>
+<value>
+    <name>Regular Expression</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Replacement Value</key>
+<value>
+    <name>Replacement Value</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Character Set</key>
+<value>
+    <name>Character Set</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Maximum Buffer Size</key>
+<value>
+    <name>Maximum Buffer Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Replacement Strategy</key>
+<value>
+    <name>Replacement Strategy</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Evaluation Mode</key>
+<value>
+    <name>Evaluation Mode</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Regular Expression</key>
+<value>(?s)(^.*$)</value>
+                            </entry>
+                            <entry>
+<key>Replacement Value</key>
+<value>SUCCESS!
+
+</value>
+                            </entry>
+                            <entry>
+<key>Character Set</key>
+<value>UTF-8</value>
+                            </entry>
+                            <entry>
+<key>Maximum Buffer Size</key>
+<value>1 MB</value>
+                            </entry>
+                            <entry>
+<key>Replacement Strategy</key>
+<value>Append</value>
+                            </entry>
+                            <entry>
+<key>Evaluation Mode</key>
+<value>Entire text</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>Append Success Message to Response</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.ReplaceText</type>
+                </processors>
+                <processors>
+                    <id>3740224b-b9ad-3d0e-0000-000000000000</id>
+                    <parentGroupId>3926a2ea-b2ac-354a-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1057.3148984721886</x>
+                        <y>982.2332213226819</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Regular Expression</key>
+<value>
+    <name>Regular Expression</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Replacement Value</key>
+<value>
+    <name>Replacement Value</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Character Set</key>
+<value>
+    <name>Character Set</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Maximum Buffer Size</key>
+<value>
+    <name>Maximum Buffer Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Replacement Strategy</key>
+<value>
+    <name>Replacement Strategy</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Evaluation Mode</key>
+<value>
+    <name>Evaluation Mode</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Regular Expression</key>
+<value>(?s)(^.*$)</value>
+                            </entry>
+                            <entry>
+<key>Replacement Value</key>
+<value>FAILURE!
+
+</value>
+                            </entry>
+                            <entry>
+<key>Character Set</key>
+<value>UTF-8</value>
+                            </entry>
+                            <entry>
+<key>Maximum Buffer Size</key>
+<value>1 MB</value>
+                            </entry>
+                            <entry>
+<key>Replacement Strategy</key>
+<value>Append</value>
+                            </entry>
+                            <entry>
+<key>Evaluation Mode</key>
+<value>Entire text</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>Append Failure Message to Response</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.ReplaceText</type>
+                </processors>
+                <processors>
+                    <id>3bdd642d-1bea-3c2d-0000-000000000000</id>
+                    <parentGroupId>3926a2ea-b2ac-354a-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1298.2290146761602</x>
+                        <y>765.3566062809069</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-azure-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Event Hub Name</key>
+<value>
+    <name>Event Hub Name</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Event Hub Namespace</key>
+<value>
+    <name>Event Hub Namespace</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Shared Access Policy Name</key>
+<value>
+    <name>Shared Access Policy Name</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Shared Access Policy Primary Key</key>
+<value>
+    <name>Shared Access Policy Primary Key</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Event Hub Name</key>
+<value>tc-az-eh-eventhub-demo</value>
+                            </entry>
+                            <entry>
+<key>Event Hub Namespace</key>
+<value>tc-eh-demo-namespace</value>
+                            </entry>
+                            <entry>
+<key>Shared Access Policy Name</key>
+<value>RootManageSharedAccessKey</value>
+                            </entry>
+                            <entry>
+<key>Shared Access Policy Primary Key</key>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>PutAzureEventHub</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.azure.eventhub.PutAzureEventHub</type>
+                </processors>
+                <processors>
+                    <id>7c3459ef-8f11-36af-0000-000000000000</id>
+                    <parentGroupId>3926a2ea-b2ac-354a-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>1297.2621453606973</x>
+                        <y>404.6216064892394</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Listening Port</key>
+<value>
+    <name>Listening Port</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Hostname</key>
+<value>
+    <name>Hostname</name>
+</value>
+                            </entry>
+                            <entry>
+<key>SSL Context Service</key>
+<value>
+    <identifiesControllerService>org.apache.nifi.ssl.RestrictedSSLContextService</identifiesControllerService>
+    <name>SSL Context Service</name>
+</value>
+                            </entry>
+                            <entry>
+<key>HTTP Context Map</key>
+<value>
+    <identifiesControllerService>org.apache.nifi.http.HttpContextMap</identifiesControllerService>
+    <name>HTTP Context Map</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Allowed Paths</key>
+<value>
+    <name>Allowed Paths</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Default URL Character Set</key>
+<value>
+    <name>Default URL Character Set</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Allow GET</key>
+<value>
+    <name>Allow GET</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Allow POST</key>
+<value>
+    <name>Allow POST</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Allow PUT</key>
+<value>
+    <name>Allow PUT</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Allow DELETE</key>
+<value>
+    <name>Allow DELETE</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Allow HEAD</key>
+<value>
+    <name>Allow HEAD</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Allow OPTIONS</key>
+<value>
+    <name>Allow OPTIONS</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Additional HTTP Methods</key>
+<value>
+    <name>Additional HTTP Methods</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Client Authentication</key>
+<value>
+    <name>Client Authentication</name>
+</value>
+                            </entry>
+                            <entry>
+<key>container-queue-size</key>
+<value>
+    <name>container-queue-size</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Listening Port</key>
+<value>3119</value>
+                            </entry>
+                            <entry>
+<key>Hostname</key>
+                            </entry>
+                            <entry>
+<key>SSL Context Service</key>
+                            </entry>
+                            <entry>
+<key>HTTP Context Map</key>
+<value>49f1722b-6018-31e8-0000-000000000000</value>
+                            </entry>
+                            <entry>
+<key>Allowed Paths</key>
+                            </entry>
+                            <entry>
+<key>Default URL Character Set</key>
+<value>UTF-8</value>
+                            </entry>
+                            <entry>
+<key>Allow GET</key>
+<value>true</value>
+                            </entry>
+                            <entry>
+<key>Allow POST</key>
+<value>true</value>
+                            </entry>
+                            <entry>
+<key>Allow PUT</key>
+<value>true</value>
+                            </entry>
+                            <entry>
+<key>Allow DELETE</key>
+<value>true</value>
+                            </entry>
+                            <entry>
+<key>Allow HEAD</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>Allow OPTIONS</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>Additional HTTP Methods</key>
+                            </entry>
+                            <entry>
+<key>Client Authentication</key>
+<value>No Authentication</value>
+                            </entry>
+                            <entry>
+<key>container-queue-size</key>
+<value>50</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>HandleHttpRequest</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.HandleHttpRequest</type>
+                </processors>
+            </contents>
+            <name>Windows Azure EventHub</name>
+            <variables/>
+        </processGroups>
+    </snippet>
+    <timestamp>08/09/2018 17:45:53 EDT</timestamp>
+</template>

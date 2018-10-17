@@ -1,0 +1,777 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<template encoding-version="1.2">
+    <description></description>
+    <groupId>5a1e98d5-0164-1000-8fc2-2804a5f55c5f</groupId>
+    <name>Mapper (XML Transformation)</name>
+    <snippet>
+        <processGroups>
+            <id>adf04937-ea32-3e27-0000-000000000000</id>
+            <parentGroupId>36b71d5a-705e-322e-0000-000000000000</parentGroupId>
+            <position>
+                <x>0.0</x>
+                <y>0.0</y>
+            </position>
+            <comments></comments>
+            <contents>
+                <connections>
+                    <id>aa3c7daf-15f8-3e1b-0000-000000000000</id>
+                    <parentGroupId>adf04937-ea32-3e27-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>adf04937-ea32-3e27-0000-000000000000</groupId>
+                        <id>e5051ba6-0bc3-32f0-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>adf04937-ea32-3e27-0000-000000000000</groupId>
+                        <id>143f527c-3350-37f1-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>fb7dd2b2-be0a-3e63-0000-000000000000</id>
+                    <parentGroupId>adf04937-ea32-3e27-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>adf04937-ea32-3e27-0000-000000000000</groupId>
+                        <id>98ac9e71-4aba-34e8-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>adf04937-ea32-3e27-0000-000000000000</groupId>
+                        <id>3ec39a27-38e3-3040-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>1d4686c4-6019-37d2-0000-000000000000</id>
+                    <parentGroupId>adf04937-ea32-3e27-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>adf04937-ea32-3e27-0000-000000000000</groupId>
+                        <id>143f527c-3350-37f1-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>success</selectedRelationships>
+                    <source>
+                        <groupId>adf04937-ea32-3e27-0000-000000000000</groupId>
+                        <id>bea92c06-5448-3591-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <connections>
+                    <id>216ab7c1-296e-3c85-0000-000000000000</id>
+                    <parentGroupId>adf04937-ea32-3e27-0000-000000000000</parentGroupId>
+                    <backPressureDataSizeThreshold>1 GB</backPressureDataSizeThreshold>
+                    <backPressureObjectThreshold>10000</backPressureObjectThreshold>
+                    <destination>
+                        <groupId>adf04937-ea32-3e27-0000-000000000000</groupId>
+                        <id>3ec39a27-38e3-3040-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </destination>
+                    <flowFileExpiration>0 sec</flowFileExpiration>
+                    <labelIndex>1</labelIndex>
+                    <name></name>
+                    <selectedRelationships>matched</selectedRelationships>
+                    <source>
+                        <groupId>adf04937-ea32-3e27-0000-000000000000</groupId>
+                        <id>e5051ba6-0bc3-32f0-0000-000000000000</id>
+                        <type>PROCESSOR</type>
+                    </source>
+                    <zIndex>0</zIndex>
+                </connections>
+                <labels>
+                    <id>3268930c-cac3-3e4d-0000-000000000000</id>
+                    <parentGroupId>adf04937-ea32-3e27-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-1632.1211125477266</x>
+                        <y>1921.2808401857633</y>
+                    </position>
+                    <height>79.61055755615234</height>
+                    <label>Replaces flowfile 
+
+content with statement 
+
+containing fields 
+
+extracted from flowfile 
+
+attributes
+
+
+</label>
+                    <style>
+                        <entry>
+                            <key>background-color</key>
+                            <value>#d6ffe2</value>
+                        </entry>
+                        <entry>
+                            <key>font-size</key>
+                            <value>12px</value>
+                        </entry>
+                    </style>
+                    <width>254.2841339111328</width>
+                </labels>
+                <labels>
+                    <id>35a06fd3-3a82-3204-0000-000000000000</id>
+                    <parentGroupId>adf04937-ea32-3e27-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-1559.5933166111593</x>
+                        <y>1178.058547760192</y>
+                    </position>
+                    <height>39.074790954589844</height>
+                    <label>                              Mapper (XML Transformation)</label>
+                    <style>
+                        <entry>
+                            <key>font-size</key>
+                            <value>16px</value>
+                        </entry>
+                    </style>
+                    <width>452.12481689453125</width>
+                </labels>
+                <labels>
+                    <id>45bee8e3-eb73-3498-0000-000000000000</id>
+                    <parentGroupId>adf04937-ea32-3e27-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-1623.1402852161837</x>
+                        <y>1485.937731054904</y>
+                    </position>
+                    <height>49.0167121887207</height>
+                    <label>Transforms incoming 
+
+XML into required 
+
+XML format 
+
+</label>
+                    <style>
+                        <entry>
+                            <key>background-color</key>
+                            <value>#d6ffe2</value>
+                        </entry>
+                        <entry>
+                            <key>font-size</key>
+                            <value>12px</value>
+                        </entry>
+                    </style>
+                    <width>253.23513793945312</width>
+                </labels>
+                <labels>
+                    <id>5e7f875a-4f97-3d06-0000-000000000000</id>
+                    <parentGroupId>adf04937-ea32-3e27-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-1624.004954062314</x>
+                        <y>1686.697740820529</y>
+                    </position>
+                    <height>76.38652038574219</height>
+                    <label>Extracts specific 
+
+fields of the XML 
+
+response and adds 
+
+these extracted fields 
+
+as flowfile attributes 
+
+
+                                                                  </label>
+                    <style>
+                        <entry>
+                            <key>background-color</key>
+                            <value>#d6ffe2</value>
+                        </entry>
+                        <entry>
+                            <key>font-size</key>
+                            <value>12px</value>
+                        </entry>
+                    </style>
+                    <width>247.42686462402344</width>
+                </labels>
+                <processors>
+                    <id>98ac9e71-4aba-34e8-0000-000000000000</id>
+                    <parentGroupId>adf04937-ea32-3e27-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-1495.2918610999432</x>
+                        <y>2141.7186105381693</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Directory</key>
+<value>
+    <name>Directory</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Conflict Resolution Strategy</key>
+<value>
+    <name>Conflict Resolution Strategy</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Create Missing Directories</key>
+<value>
+    <name>Create Missing Directories</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Maximum File Count</key>
+<value>
+    <name>Maximum File Count</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Last Modified Time</key>
+<value>
+    <name>Last Modified Time</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Permissions</key>
+<value>
+    <name>Permissions</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Owner</key>
+<value>
+    <name>Owner</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Group</key>
+<value>
+    <name>Group</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Directory</key>
+                            </entry>
+                            <entry>
+<key>Conflict Resolution Strategy</key>
+<value>fail</value>
+                            </entry>
+                            <entry>
+<key>Create Missing Directories</key>
+<value>true</value>
+                            </entry>
+                            <entry>
+<key>Maximum File Count</key>
+                            </entry>
+                            <entry>
+<key>Last Modified Time</key>
+                            </entry>
+                            <entry>
+<key>Permissions</key>
+                            </entry>
+                            <entry>
+<key>Owner</key>
+                            </entry>
+                            <entry>
+<key>Group</key>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>PutFile</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.PutFile</type>
+                </processors>
+                <processors>
+                    <id>bea92c06-5448-3591-0000-000000000000</id>
+                    <parentGroupId>adf04937-ea32-3e27-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-1501.581352297681</x>
+                        <y>1276.2949053096881</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>File Size</key>
+<value>
+    <name>File Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Batch Size</key>
+<value>
+    <name>Batch Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Data Format</key>
+<value>
+    <name>Data Format</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Unique FlowFiles</key>
+<value>
+    <name>Unique FlowFiles</name>
+</value>
+                            </entry>
+                            <entry>
+<key>generate-ff-custom-text</key>
+<value>
+    <name>generate-ff-custom-text</name>
+</value>
+                            </entry>
+                            <entry>
+<key>character-set</key>
+<value>
+    <name>character-set</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>File Size</key>
+<value>0B</value>
+                            </entry>
+                            <entry>
+<key>Batch Size</key>
+<value>1</value>
+                            </entry>
+                            <entry>
+<key>Data Format</key>
+<value>Text</value>
+                            </entry>
+                            <entry>
+<key>Unique FlowFiles</key>
+<value>false</value>
+                            </entry>
+                            <entry>
+<key>generate-ff-custom-text</key>
+<value>&lt;?xml version="1.0"?&gt;
+&lt;rentalProperties&gt;
+    &lt;property contact ="1"&gt;
+        &lt;type&gt;House &lt;/type&gt;
+        &lt;price&gt;420&lt;/price&gt;
+        &lt;address&gt;
+            &lt;streetNo&gt;1&lt;/streetNo&gt;
+            &lt;street&gt;Wavell Street&lt;/street&gt;
+            &lt;suburb&gt;Box Hill&lt;/suburb&gt;
+            &lt;state&gt;VIC&lt;/state&gt;
+            &lt;zipcode&gt;3128&lt;/zipcode&gt; 
+        &lt;/address&gt;
+        &lt;numberOfBedrooms&gt;3&lt;/numberOfBedrooms&gt;
+        &lt;numberOfBathrooms&gt;1&lt;/numberOfBathrooms&gt; 
+        &lt;garage&gt;1&lt;/garage&gt;   
+    &lt;/property&gt;
+&lt;/rentalProperties&gt;</value>
+                            </entry>
+                            <entry>
+<key>character-set</key>
+<value>UTF-8</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>60 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>Generate XML to be Transformed</name>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.GenerateFlowFile</type>
+                </processors>
+                <processors>
+                    <id>e5051ba6-0bc3-32f0-0000-000000000000</id>
+                    <parentGroupId>adf04937-ea32-3e27-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-1498.322208396663</x>
+                        <y>1699.879968719108</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Destination</key>
+<value>
+    <name>Destination</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Return Type</key>
+<value>
+    <name>Return Type</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Validate DTD</key>
+<value>
+    <name>Validate DTD</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Contact</key>
+<value>
+    <name>Contact</name>
+</value>
+                            </entry>
+                            <entry>
+<key>NumberOfBedrooms</key>
+<value>
+    <name>NumberOfBedrooms</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Price</key>
+<value>
+    <name>Price</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Street</key>
+<value>
+    <name>Street</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Type</key>
+<value>
+    <name>Type</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Destination</key>
+<value>flowfile-attribute</value>
+                            </entry>
+                            <entry>
+<key>Return Type</key>
+<value>auto-detect</value>
+                            </entry>
+                            <entry>
+<key>Validate DTD</key>
+<value>true</value>
+                            </entry>
+                            <entry>
+<key>Contact</key>
+<value>string(/rentalProperties/property/@contact)</value>
+                            </entry>
+                            <entry>
+<key>NumberOfBedrooms</key>
+<value>string(/rentalProperties/property/numberOfBedrooms)</value>
+                            </entry>
+                            <entry>
+<key>Price</key>
+<value>string(/rentalProperties/property/price)</value>
+                            </entry>
+                            <entry>
+<key>Street</key>
+<value>string(/rentalProperties/property/street)</value>
+                            </entry>
+                            <entry>
+<key>Type</key>
+<value>string(/rentalProperties/property/type)</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>Extract required fields from XML</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>matched</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>unmatched</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.EvaluateXPath</type>
+                </processors>
+                <processors>
+                    <id>143f527c-3350-37f1-0000-000000000000</id>
+                    <parentGroupId>adf04937-ea32-3e27-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-1497.2166957601103</x>
+                        <y>1484.1011996363227</y>
+                    </position>
+                    <bundle>
+                        <artifact>tc-mapper-nar</artifact>
+                        <group>ge.digital.tc</group>
+                        <version>2.0.0-SNAPSHOT</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>SOURCE</key>
+<value>
+    <name>SOURCE</name>
+</value>
+                            </entry>
+                            <entry>
+<key>TARGET</key>
+<value>
+    <name>TARGET</name>
+</value>
+                            </entry>
+                            <entry>
+<key>MAP_SPEC</key>
+<value>
+    <name>MAP_SPEC</name>
+</value>
+                            </entry>
+                            <entry>
+<key>MAP_FILE_LOCATION</key>
+<value>
+    <name>MAP_FILE_LOCATION</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>SOURCE</key>
+<value>XML</value>
+                            </entry>
+                            <entry>
+<key>TARGET</key>
+<value>XML</value>
+                            </entry>
+                            <entry>
+<key>MAP_SPEC</key>
+<value>&lt;?xml version="1.0" encoding="UTF-8" standalone="no"?&gt;
+&lt;xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0"&gt;
+   &lt;xsl:template match="/"&gt;
+      &lt;rentalProperties&gt;
+         &lt;!--@(contact?) (type , price , street , numberOfBedrooms , numberOfBathrooms , garage)--&gt;
+         &lt;property contact="{/rentalProperties/property/@contact}"&gt;
+            &lt;type&gt;
+               &lt;xsl:value-of select="/rentalProperties/property/type"/&gt;
+            &lt;/type&gt;
+            &lt;price&gt;
+               &lt;xsl:value-of select="/rentalProperties/property/price"/&gt;
+            &lt;/price&gt;
+            &lt;street&gt;
+               &lt;xsl:value-of select="/rentalProperties/property/address/street"/&gt;
+            &lt;/street&gt;
+            &lt;numberOfBedrooms&gt;
+               &lt;xsl:value-of select="/rentalProperties/property/numberOfBedrooms"/&gt;
+            &lt;/numberOfBedrooms&gt;
+            &lt;numberOfBathrooms&gt;
+               &lt;xsl:value-of select="/rentalProperties/property/numberOfBathrooms"/&gt;
+            &lt;/numberOfBathrooms&gt;
+            &lt;garage&gt;
+               &lt;xsl:value-of select="/rentalProperties/property/garage"/&gt;
+            &lt;/garage&gt;
+         &lt;/property&gt;
+      &lt;/rentalProperties&gt;
+   &lt;/xsl:template&gt;
+&lt;/xsl:stylesheet&gt;
+</value>
+                            </entry>
+                            <entry>
+<key>MAP_FILE_LOCATION</key>
+<value>MAPPER\XSLT\rentalProperties(2018-08-20_00-50).xsl</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>Transform XML</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>ge.digital.tc.processors.mapper.ThreadConnectMapper</type>
+                </processors>
+                <processors>
+                    <id>3ec39a27-38e3-3040-0000-000000000000</id>
+                    <parentGroupId>adf04937-ea32-3e27-0000-000000000000</parentGroupId>
+                    <position>
+                        <x>-1497.3159277391455</x>
+                        <y>1923.1819956164613</y>
+                    </position>
+                    <bundle>
+                        <artifact>nifi-standard-nar</artifact>
+                        <group>org.apache.nifi</group>
+                        <version>1.5.0</version>
+                    </bundle>
+                    <config>
+                        <bulletinLevel>WARN</bulletinLevel>
+                        <comments></comments>
+                        <concurrentlySchedulableTaskCount>1</concurrentlySchedulableTaskCount>
+                        <descriptors>
+                            <entry>
+<key>Regular Expression</key>
+<value>
+    <name>Regular Expression</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Replacement Value</key>
+<value>
+    <name>Replacement Value</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Character Set</key>
+<value>
+    <name>Character Set</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Maximum Buffer Size</key>
+<value>
+    <name>Maximum Buffer Size</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Replacement Strategy</key>
+<value>
+    <name>Replacement Strategy</name>
+</value>
+                            </entry>
+                            <entry>
+<key>Evaluation Mode</key>
+<value>
+    <name>Evaluation Mode</name>
+</value>
+                            </entry>
+                        </descriptors>
+                        <executionNode>ALL</executionNode>
+                        <lossTolerant>false</lossTolerant>
+                        <penaltyDuration>30 sec</penaltyDuration>
+                        <properties>
+                            <entry>
+<key>Regular Expression</key>
+<value>(?s)(^.*$)</value>
+                            </entry>
+                            <entry>
+<key>Replacement Value</key>
+<value>Contact : ${Contact}, Type : ${Type}, Price : ${Price}, Street : ${Street}, NumberOfBedrooms : ${NumberOfBedrooms}</value>
+                            </entry>
+                            <entry>
+<key>Character Set</key>
+<value>UTF-8</value>
+                            </entry>
+                            <entry>
+<key>Maximum Buffer Size</key>
+<value>1 MB</value>
+                            </entry>
+                            <entry>
+<key>Replacement Strategy</key>
+<value>Regex Replace</value>
+                            </entry>
+                            <entry>
+<key>Evaluation Mode</key>
+<value>Entire text</value>
+                            </entry>
+                        </properties>
+                        <runDurationMillis>0</runDurationMillis>
+                        <schedulingPeriod>0 sec</schedulingPeriod>
+                        <schedulingStrategy>TIMER_DRIVEN</schedulingStrategy>
+                        <yieldDuration>1 sec</yieldDuration>
+                    </config>
+                    <name>ReplaceText</name>
+                    <relationships>
+                        <autoTerminate>true</autoTerminate>
+                        <name>failure</name>
+                    </relationships>
+                    <relationships>
+                        <autoTerminate>false</autoTerminate>
+                        <name>success</name>
+                    </relationships>
+                    <state>STOPPED</state>
+                    <style/>
+                    <type>org.apache.nifi.processors.standard.ReplaceText</type>
+                </processors>
+            </contents>
+            <name>Mapper (XML Transformation)</name>
+            <variables/>
+        </processGroups>
+    </snippet>
+    <timestamp>08/20/2018 01:17:03 GMT+05:30</timestamp>
+</template>
