@@ -8,3 +8,4 @@ This repo contains documentation and "getting started" examples for the Thread C
 
 - [Thread Connect Wiki](https://github.com/thread-connect/tc-wiki/wiki)
 
+/// test edit //
