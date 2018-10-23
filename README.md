@@ -46,13 +46,13 @@ BAPI processor supports:
 
 IDOC processor supports:
 * Receive IDOCs from SAP system configured in the SAP processor.
-* Add IDOC control headers to the NiFi Attributes
+* Add IDOC control headers to the ThreadConnect Attributes
 * Output IDOC received from SAP in XML or JSON format.
 * IDOC Packaging- receive packaged IDOCs from SAP system and process them as separate flow-files in Thread Connect.
 * Post IDOCs to SAP system configured in the processor
-* Ability to update control headers using dynamic processor property, and NiFi Attributes in case of Post IDOC.
+* Ability to update control headers using dynamic processor property, and ThreadConnect Attributes in case of Post IDOC.
 * Reprocessing of flow files when there is a connection timeout for Post IDOC.
-* Error Handling for general exceptions related to NiFi Attributes.
+* Error Handling for general exceptions related to ThreadConnect Attributes.
 * IDOC Packaging receive packaged IDOCs from the upstream process flow in Thread connect and process the IDOCs in packages to SAP system.
 
 Salesforce Connector Version 1.0.0
