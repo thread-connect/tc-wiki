@@ -6,7 +6,7 @@ This guide contains information on how to get started using Thread Connect (TC) 
 
 Topics range from beginner to advanced. Navigate through the pages with the sidebar on this page. Example data flows are contained in the Code section of this repository, under the Examples folder.
 
-### [Visit the Wiki](https://github.com/thread-connect/tc-wiki)
+### [Visit the Wiki](https://github.com/thread-connect/tc-wiki/wiki)
 
 _For more information on our product and development team, visit https://docs.predix.io/en-US/content/service/app_services/thread_connect_integration_platform/_
 
