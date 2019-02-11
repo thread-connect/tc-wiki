@@ -11,7 +11,7 @@ Thread Connect (TC) is an advanced, enterprise ready platform, for building comp
 - [Release Notes](docs/RELEASE_NOTES.md)
 
 ### Getting Started
-- [Thread Connect on Predix](docs/PREDIX_GETTING_STARTED.md)
+- [Thread Connect on Predix](docs/PREDIX_GETTING_STARTED.md#getting-started-on-predix)
 - [Thread Connect User Guide](docs/USER_GUIDE.md#thread-connect-user-guide)
 
 ### Getting Help
