@@ -1,7 +1,5 @@
 [Back to Home Page](../README.md#welcome-to-thread-connect)
 
-[Back to Home Page](../README.md#welcome-to-thread-connect)
-
 # Thread Connect Release Notes
 
 
