@@ -2,8 +2,35 @@
 
 # Thread Connect Release Notes
 
+<details><summary>Q2 2019 Release Version rel- 2.0.6 </summary>
 
-<details><summary>Q1 2019 Release Version rel-2.0.2</summary>
+### Q2 2019 Release Notes
+
+#### Connector
+
+##### New in TC
+
+* **oAuth2 Controller service** : The Controller Service handle OAuth 2.0 Authentication by providing a functionality for fetching access token using Client Credentials Grant Type and providing a Java API to implement this Controller Service while developing TC custom processors
+  - There are some additional capabilities which make integrations more flexible :-<br>
+    - Two Authentication Methods<br>
+       1. Client ID/Secret <br>
+       2. Basic Auth Header<br>
+    - Custom Token Refresh Interval : to provide custom token expiration duration<br>
+    - Custom Access Token Header Name : to provide custom Header name for access token. Default is "Authorization"<br>
+ 
+* **Custom InvokeHTTP processor** : This processor utilizes the new oAuth2 Controller service to invoke an api that is oAuth2 protected and requires a bearer token in the Authorization header. This processor simplifies the oAuth2 API integration by eliminating multiple steps in the flow and also provides inherent token caching and lifecycle management by auto refreshing the token based on the expiry interval<br> 
+	
+#### Developer Productivity 
+* **Improvements for local development** : New TC image is now available to run on a local as a 2 node cluster using Ansible and virtual box images. This can now be built easily using few commands and with very little manual intervention. This works on Windows and Mac
+
+#### Misc
+* **Connector Count Report**: To help ease the connector count for pricing, there is an added functionality to retrieve and save the connector report to a CSV/JSON file. This functionality is added as a part of TC Admin<br>
+
+* **Documentation** : TC-Specific documentation is now accessible directly from NiFi help documentation (Global Help Menu) to explain Thread Connect offerings as an extension to Apache NiFi. This includes templates, user management, extensions etc
+
+</details>
+
+<details><summary>Q1 2019 Release Version rel- 2.0.2</summary>
 
 ### Q1 2019 Release Notes
 
@@ -33,18 +60,14 @@ TC now upgraded to Nifi 1.8
 * NiFi Port list
 * For additional details check out - Apache Nifi release notes
 
-
 #### Security
 * Lacking file access permissions - Granular user permission for uploaded files, uploaded files now only visible to uploaded user and admin by default. Explicit access to the file would need to be granted to other users. This fixes the file access issue where all users could access the uploaded file(s).
 * Nifi application running as root - With this release you will now be able to install Nifi as a non root user additional security fixes from Rel 1.6 and 1.7 are also included see documentation for details - Apache Nifi release notes
 
-
 #### Connector
-
 
 ##### New in TC
 TC now supports Predix timeSeries data ingestion using custom connector
-
 
 ##### Enhancements
 * Nurego metering fixed for TC.
@@ -52,14 +75,11 @@ TC now supports Predix timeSeries data ingestion using custom connector
 * Enhanced EC controller service integration in TC
 * Salesforce connector now supports SOQL that allows to create advanced and complex queries
 
-
 ##### IOT
-
 
 * TC in Edge Ecosystem
 * TC- Edge CPP version now available for IOT - Contact us to discuss edge use cases
 * TC- Edge Java version now available for IOT - Contact us to discuss edge use cases
-
 
 #### Misc
 * Auto scaling feature now supports scale-up or scale-down of the nodes in cluster as per demand
@@ -67,8 +87,7 @@ TC now supports Predix timeSeries data ingestion using custom connector
 
 </details>
 
-
-<details><summary>Q3 2018 Release Version rel-1.2.10</summary>
+<details><summary>Q3 2018 Release Version rel- 1.2.10</summary>
 
 ### Q3 2018 Release Notes
 
@@ -168,6 +187,4 @@ Oracle8i Release Features
  
 Prerequisite: Enterprise Connect Predix Service - EC Gateway are setup and ready to use.
 
-
 </details>
-
